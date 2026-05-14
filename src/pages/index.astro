@@ -1,43 +1,43 @@
 ---
-// AeonCircle — Live to 120 with AI
+// AeonCircle — The Healthspan Club
 ---
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AeonCircle — Live to 120 with AI</title>
-<meta name="description" content="AI-driven longevity. Real-time vitals, gene optimization, metabolic regulation, aging reversal, personalized life-extension protocols." />
+<title>AeonCircle — A private healthspan club</title>
+<meta name="description" content="A private healthspan club. The few have had health teams of their own. AeonCircle is for everyone else." />
 <link rel="canonical" href="https://aeoncircle.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://aeoncircle.com/" />
-<meta property="og:title" content="AeonCircle — Live to 120 with AI" />
-<meta property="og:description" content="An AI-driven longevity system. Live to 120, by design." />
+<meta property="og:title" content="AeonCircle — A private healthspan club" />
+<meta property="og:description" content="Live well. For 120 well-lived years. A private healthspan club for everyone serious about a long life." />
 <meta property="og:site_name" content="AeonCircle" />
-<meta name="theme-color" content="#0A192F" />
+<meta name="theme-color" content="#0F1411" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=IBM+Plex+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --space: #0A192F;
-    --space-2: #0E2240;
-    --space-3: #142B4F;
-    --cyan: #64FFDA;
-    --cyan-dim: rgba(100,255,218,0.55);
-    --cyan-soft: rgba(100,255,218,0.10);
-    --white: #F8FBFF;
-    --white-2: #B8C8DC;
-    --white-3: #7A8AA0;
-    --purple: #9D4EDD;
-    --line: rgba(248,251,255,0.10);
-    --line-2: rgba(248,251,255,0.18);
+    --bg: #0F1411;            /* deep charcoal-green near-black */
+    --bg-2: #161B17;
+    --bg-3: #1D231F;
+    --ink: #EFEAD8;           /* warm bone cream */
+    --ink-2: #B8B29C;
+    --muted: #80796A;
+    --dim:   #5C5648;
+    --brass: #B5934A;         /* aged brass — the club's single accent */
+    --brass-soft: rgba(181,147,74,0.55);
+    --brass-faint: rgba(181,147,74,0.12);
+    --line: rgba(239,234,216,0.08);
+    --line-2: rgba(239,234,216,0.16);
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
   body {
-    background: var(--space);
-    color: var(--white);
+    background: var(--bg);
+    color: var(--ink);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
@@ -47,325 +47,330 @@
     position: relative;
   }
 
-  /* ── Navigation ───────────────────────────────────────────── */
+  /* ── Navigation ──────────────────────────────────── */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
-    padding: 18px 40px;
+    padding: 20px 40px;
     display: flex; justify-content: space-between; align-items: center;
-    background: rgba(10,25,47,0.55);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background: rgba(15,20,17,0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--line);
   }
   .brand {
     display: flex; align-items: center; gap: 12px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600; font-size: 16px;
-    letter-spacing: 0.06em;
-    color: var(--white);
-    text-transform: uppercase;
+    font-family: 'Fraunces', Georgia, serif;
+    font-variation-settings: "opsz" 36, "wght" 500, "SOFT" 50;
+    font-size: 19px;
+    color: var(--ink);
     text-decoration: none;
   }
-  .brand-mark { width: 26px; height: 26px; color: var(--cyan); }
+  .brand-mark { width: 28px; height: 28px; color: var(--brass); }
   .nav-links {
-    display: flex; gap: 28px;
-    font-family: 'Inter', sans-serif;
-    font-size: 13px; font-weight: 400;
-    color: var(--white-2);
+    display: flex; gap: 32px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-2);
   }
   .nav-links a {
-    color: var(--white-2); text-decoration: none;
-    transition: color .2s;
-    letter-spacing: 0.02em;
+    color: var(--ink-2); text-decoration: none;
+    transition: color .25s;
   }
-  .nav-links a:hover { color: var(--cyan); }
-  .nav-links a.login {
-    padding: 6px 14px;
+  .nav-links a:hover { color: var(--brass); }
+  .nav-links a.join {
+    color: var(--ink);
+    padding: 5px 14px;
     border: 1px solid var(--line-2);
-    border-radius: 4px;
+    border-radius: 999px;
   }
+  .nav-links a.join:hover { border-color: var(--brass); color: var(--brass); }
 
   section {
     position: relative;
-    padding: 120px 40px;
+    padding: 140px 40px;
     overflow: hidden;
   }
 
-  /* ── Section 1: Hero ──────────────────────────────────────── */
+  /* ── Section 1: Hero ─────────────────────────────── */
   .hero {
     min-height: 100vh;
-    padding: 140px 40px 80px;
+    padding: 160px 40px 96px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     text-align: center;
     background:
-      radial-gradient(1100px 700px at 50% 40%, rgba(100,255,218,0.10), transparent 65%),
-      radial-gradient(700px 600px at 80% 90%, rgba(157,78,221,0.06), transparent 60%),
-      var(--space);
+      radial-gradient(1100px 700px at 50% 40%, rgba(181,147,74,0.08), transparent 65%),
+      radial-gradient(600px 500px at 18% 92%, rgba(181,147,74,0.04), transparent 65%),
+      var(--bg);
   }
-
-  /* DNA particle / cell field — pure CSS+SVG, subtle motion */
-  .dna-bg {
-    position: absolute; inset: 0; z-index: 0;
+  /* Subtle paper grain */
+  .grain {
+    position: fixed; inset: 0; z-index: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.035 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.55;
     pointer-events: none;
-    opacity: 0.45;
+    mix-blend-mode: overlay;
   }
-  .dna-bg svg { width: 100%; height: 100%; }
-  .dna-bg .strand {
-    stroke: var(--cyan);
-    fill: none;
-    stroke-width: 0.6;
-    opacity: 0.35;
-    animation: drift 40s linear infinite;
-  }
-  .dna-bg .strand-2 { animation-direction: reverse; animation-duration: 55s; stroke: rgba(157,78,221,0.4); }
-  @keyframes drift {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-160px); }
-  }
-  /* Floating cell dots */
-  .cells { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-  .cells .cell {
-    position: absolute;
-    width: 4px; height: 4px;
-    background: var(--cyan);
+  /* A single slow-rotating ring behind hero — the "circle" mark */
+  .hero-ring {
+    position: absolute; left: 50%; top: 50%;
+    width: min(86vmin, 800px); aspect-ratio: 1/1;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--brass-faint);
     border-radius: 50%;
-    opacity: 0.4;
-    animation: float linear infinite;
-    box-shadow: 0 0 8px rgba(100,255,218,0.5);
+    pointer-events: none;
+    animation: spin 120s linear infinite;
   }
-  @keyframes float {
-    0%   { transform: translateY(0) translateX(0); opacity: 0; }
-    10%  { opacity: 0.5; }
-    90%  { opacity: 0.4; }
-    100% { transform: translateY(-120vh) translateX(40px); opacity: 0; }
+  .hero-ring::before {
+    content: ""; position: absolute; inset: 9%;
+    border: 1px dashed rgba(181,147,74,0.10);
+    border-radius: 50%;
+  }
+  .hero-ring::after {
+    content: ""; position: absolute;
+    top: -5px; left: 50%; transform: translateX(-50%);
+    width: 9px; height: 9px;
+    background: var(--brass);
+    border-radius: 50%;
+  }
+  @keyframes spin {
+    from { transform: translate(-50%, -50%) rotate(0); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  .hero-halo {
+    position: absolute; left: 50%; top: 50%;
+    width: min(60vmin, 520px); aspect-ratio: 1/1;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(181,147,74,0.22) 0%, rgba(181,147,74,0.06) 35%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+    animation: breathe 11s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes breathe {
+    0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.85; }
+    50%      { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
   }
 
-  .hero-content { position: relative; z-index: 2; max-width: 920px; }
+  .hero-content { position: relative; z-index: 2; max-width: 760px; }
 
-  .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    margin-bottom: 32px;
-    font-family: 'Orbitron', monospace;
-    font-size: 11px; font-weight: 500;
-    letter-spacing: 0.3em; text-transform: uppercase;
-    color: var(--cyan);
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    margin-bottom: 36px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--ink-2);
   }
-  .hero-eyebrow .pulse {
-    width: 7px; height: 7px;
-    background: var(--cyan);
-    border-radius: 50%;
-    box-shadow: 0 0 12px var(--cyan);
-    animation: blink 2.2s ease-in-out infinite;
+  .eyebrow .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--brass);
+    animation: blink 3s ease-in-out infinite;
   }
-  @keyframes blink {
-    0%, 100% { opacity: 0.4; }
-    50%      { opacity: 1; }
-  }
+  @keyframes blink { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
 
   .hero h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: clamp(48px, 8vw, 112px);
-    line-height: 0.95;
-    letter-spacing: 0.01em;
-    margin: 0 0 22px;
-    color: var(--white);
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(56px, 10vw, 132px);
+    line-height: 0.96;
+    margin: 0 0 14px;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 50;
+    letter-spacing: -0.03em;
+    color: var(--ink);
   }
-  .hero h1 .with-ai {
-    color: var(--cyan);
-  }
-  .hero-zh {
-    font-family: 'Inter', 'Noto Sans SC', sans-serif;
-    font-size: clamp(16px, 1.6vw, 19px);
-    color: var(--white-2);
-    letter-spacing: 0.06em;
-    margin: 0 0 18px;
-    font-weight: 400;
+  .hero h1 em {
+    display: block;
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 50, "WONK" 1;
+    color: var(--brass);
   }
   .hero-sub {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-variation-settings: "opsz" 36, "wght" 400;
+    font-size: clamp(18px, 1.8vw, 22px);
+    color: var(--ink-2);
+    margin: 22px 0 12px;
+    line-height: 1.4;
+  }
+  .hero-zh {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(13px, 1.2vw, 15px);
-    color: var(--white-3);
-    letter-spacing: 0.04em;
-    margin: 0 auto 48px;
-    max-width: 760px;
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    margin: 0 0 48px;
     line-height: 1.7;
-    font-weight: 300;
   }
   .hero-buttons {
-    display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;
+    display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
   }
   .btn-primary, .btn-secondary {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 0.16em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 16px 30px;
-    border-radius: 4px;
-    display: inline-flex; align-items: center; gap: 12px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 14px;
     transition: all .3s ease;
     cursor: pointer;
   }
   .btn-primary {
-    background: linear-gradient(90deg, var(--cyan) 0%, #4FE0BD 100%);
-    color: var(--space);
-    border: 1px solid var(--cyan);
+    background: var(--ink);
+    color: var(--bg);
+    border: 1px solid var(--ink);
   }
   .btn-primary:hover {
-    background: var(--cyan);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(100,255,218,0.25);
+    background: var(--brass); color: var(--bg); border-color: var(--brass);
+    transform: translateY(-1px);
   }
   .btn-primary .arrow { transition: transform .3s ease; }
-  .btn-primary:hover .arrow { transform: translateX(4px); }
+  .btn-primary:hover .arrow { transform: translateX(5px); }
   .btn-secondary {
     background: transparent;
-    color: var(--white);
+    color: var(--ink);
     border: 1px solid var(--line-2);
   }
-  .btn-secondary:hover {
-    border-color: var(--cyan);
-    color: var(--cyan);
-  }
+  .btn-secondary:hover { border-color: var(--brass); color: var(--brass); }
 
-  /* Scroll cue */
   .scroll-cue {
-    position: absolute; bottom: 30px; left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Orbitron', monospace;
-    font-size: 10px; letter-spacing: 0.3em; color: var(--white-3);
-    text-transform: uppercase;
+    position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--muted);
     display: flex; flex-direction: column; align-items: center; gap: 12px;
+    z-index: 2;
   }
   .scroll-cue::after {
     content: ""; width: 1px; height: 36px;
-    background: linear-gradient(180deg, var(--cyan) 0%, transparent 100%);
-    animation: cueDrop 1.8s ease-in-out infinite;
+    background: linear-gradient(180deg, var(--brass) 0%, transparent 100%);
+    animation: cueDrop 2s ease-in-out infinite;
   }
   @keyframes cueDrop {
-    0%, 100% { opacity: 0.3; height: 28px; }
+    0%, 100% { opacity: 0.25; height: 28px; }
     50%      { opacity: 1; height: 44px; }
   }
 
-  /* ── Section title (shared) ───────────────────────────────── */
+  /* ── Shared section title ─────────────────────────── */
   .section-eyebrow {
-    font-family: 'Orbitron', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
-    color: var(--cyan); margin: 0 0 16px;
-    font-weight: 500;
+    color: var(--brass);
+    margin: 0 0 18px;
   }
   .section-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    font-size: clamp(36px, 5vw, 64px);
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    margin: 0 0 56px;
-    color: var(--white);
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 50;
+    font-size: clamp(36px, 5.2vw, 68px);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    margin: 0 0 64px;
+    color: var(--ink);
   }
-  .section-title .accent { color: var(--cyan); }
+  .section-title em {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 50, "WONK" 1;
+    color: var(--brass);
+  }
 
-  /* ── Section 2: Core Value (3 cards) ──────────────────────── */
-  .system {
-    background: var(--space);
-  }
-  .system::before {
-    content: ""; position: absolute; inset: 0;
-    background: radial-gradient(800px 500px at 50% 0%, rgba(100,255,218,0.04), transparent 60%);
-    pointer-events: none;
-  }
-  .system-container { max-width: 1280px; margin: 0 auto; position: relative; }
+  /* ── Section 2: What's in the membership ────────── */
+  .membership { background: var(--bg); border-top: 1px solid var(--line); }
+  .membership-container { max-width: 1200px; margin: 0 auto; position: relative; }
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
   }
   .card {
-    background: linear-gradient(180deg, rgba(248,251,255,0.025) 0%, rgba(248,251,255,0.005) 100%);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 36px 28px;
-    transition: border-color .3s ease, transform .3s ease, background .3s ease;
+    background: var(--bg);
+    padding: 56px 40px;
+    transition: background .35s ease;
     position: relative;
-    overflow: hidden;
   }
-  .card:hover {
-    border-color: var(--cyan-dim);
-    transform: translateY(-3px);
-    background: linear-gradient(180deg, rgba(100,255,218,0.04) 0%, rgba(248,251,255,0.01) 100%);
-  }
-  .card-icon {
-    width: 44px; height: 44px;
-    color: var(--cyan);
-    margin-bottom: 26px;
-  }
+  .card:hover { background: var(--bg-2); }
   .card-num {
-    font-family: 'Orbitron', monospace;
-    font-size: 11px; letter-spacing: 0.3em;
-    color: var(--cyan); opacity: 0.6;
-    margin-bottom: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 36px;
+  }
+  .card-num::before {
+    content: ""; display: inline-block;
+    width: 28px; height: 1px;
+    background: var(--brass);
+    margin-right: 12px;
+    vertical-align: 3px;
   }
   .card h3 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    margin: 0 0 14px;
-    color: var(--white);
-    letter-spacing: -0.005em;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 36, "wght" 500, "SOFT" 50;
+    font-size: 26px;
+    margin: 0 0 18px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .card h3 em {
+    font-style: italic;
+    font-variation-settings: "opsz" 36, "wght" 500, "SOFT" 50, "WONK" 1;
+    color: var(--brass);
   }
   .card p {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--white-2);
+    font-size: 14.5px;
+    line-height: 1.75;
+    color: var(--ink-2);
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
   }
 
-  /* ── Section 3: Science (left/right) ──────────────────────── */
-  .science {
-    background: var(--space-2);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-  }
-  .science-container {
-    max-width: 1280px; margin: 0 auto;
+  /* ── Section 3: How the circle works ─────────────── */
+  .how { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .how-container {
+    max-width: 1200px; margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 96px;
     align-items: center;
   }
-  .science-diagram { position: relative; }
-  .science-diagram svg { width: 100%; height: auto; }
-  .science-text .section-eyebrow { color: var(--cyan); }
-  .science-text h2 {
-    font-family: 'Orbitron', monospace;
-    font-weight: 700;
-    font-size: clamp(28px, 4vw, 48px);
-    line-height: 1.1;
-    letter-spacing: 0.01em;
-    margin: 0 0 28px;
-    color: var(--white);
-    text-transform: uppercase;
+  .how-diagram { position: relative; }
+  .how-diagram svg { width: 100%; height: auto; max-width: 480px; display: block; margin: 0 auto; }
+  .how-text h2 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 50;
+    font-size: clamp(32px, 4.4vw, 56px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0 0 32px;
+    color: var(--ink);
   }
-  .science-text h2 .num { color: var(--cyan); }
-  .science-text p {
+  .how-text h2 em {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 50, "WONK" 1;
+    color: var(--brass);
+  }
+  .how-text p {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    line-height: 1.8;
-    color: var(--white-2);
-    margin: 0 0 16px;
-    font-weight: 300;
+    line-height: 1.85;
+    color: var(--ink-2);
+    margin: 0 0 18px;
+    font-weight: 400;
   }
-  .science-text p strong { color: var(--cyan); font-weight: 500; }
+  .how-text p strong { color: var(--ink); font-weight: 500; }
+  .how-text p em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--brass);
+    font-size: 1.05em;
+  }
 
-  /* ── Section 4: Service flow timeline ─────────────────────── */
-  .process { background: var(--space); }
-  .process-container { max-width: 980px; margin: 0 auto; position: relative; }
+  /* ── Section 4: Journey timeline ─────────────────── */
+  .journey { background: var(--bg); }
+  .journey-container { max-width: 920px; margin: 0 auto; }
   .timeline {
     list-style: none; padding: 0; margin: 0;
     position: relative;
@@ -373,17 +378,17 @@
   }
   .timeline::before {
     content: ""; position: absolute;
-    left: 24px; top: 12px; bottom: 12px;
+    left: 27px; top: 14px; bottom: 14px;
     width: 1px;
-    background: linear-gradient(180deg, var(--cyan) 0%, rgba(100,255,218,0.2) 50%, transparent 100%);
+    background: linear-gradient(180deg, var(--brass) 0%, rgba(181,147,74,0.2) 60%, transparent 100%);
   }
   .timeline li {
     counter-increment: step;
     position: relative;
-    padding: 22px 0 22px 76px;
+    padding: 28px 0 28px 84px;
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 16px;
+    gap: 24px;
     align-items: baseline;
     border-bottom: 1px solid var(--line);
   }
@@ -391,99 +396,104 @@
   .timeline li::before {
     content: counter(step, decimal-leading-zero);
     position: absolute;
-    left: 0; top: 22px;
-    width: 48px; height: 48px;
-    border: 1px solid var(--cyan);
+    left: 0; top: 28px;
+    width: 54px; height: 54px;
+    border: 1px solid var(--brass);
     border-radius: 50%;
-    background: var(--space);
-    color: var(--cyan);
-    font-family: 'Orbitron', monospace;
-    font-size: 13px;
+    background: var(--bg);
+    color: var(--brass);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
     display: flex; align-items: center; justify-content: center;
   }
   .timeline .step-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 500;
-    font-size: 19px;
-    color: var(--white);
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 36, "wght" 400, "SOFT" 50;
+    font-size: clamp(20px, 2.2vw, 26px);
+    color: var(--ink);
+    letter-spacing: -0.005em;
   }
   .timeline .step-meta {
-    font-family: 'Orbitron', monospace;
-    font-size: 10px;
-    color: var(--white-3);
-    letter-spacing: 0.2em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: var(--muted);
+    letter-spacing: 0.26em;
     text-transform: uppercase;
   }
 
-  /* ── Section 5: Research backing ──────────────────────────── */
+  /* ── Section 5: Research / partners ──────────────── */
   .research {
-    background: var(--space-2);
+    background: var(--bg-2);
     text-align: center;
     border-top: 1px solid var(--line);
   }
   .research-container { max-width: 1180px; margin: 0 auto; }
   .research-tag {
-    font-family: 'Orbitron', monospace;
-    font-size: 12px; letter-spacing: 0.4em; text-transform: uppercase;
-    color: var(--cyan);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase;
+    color: var(--brass);
     margin: 0 0 56px;
   }
   .logos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1px;
-    background: var(--line-2);
-    border: 1px solid var(--line-2);
+    background: var(--line);
+    border: 1px solid var(--line);
   }
   .logo-cell {
-    background: var(--space-2);
-    padding: 36px 18px;
+    background: var(--bg-2);
+    padding: 40px 18px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 10px;
+    gap: 8px;
     transition: background .3s ease;
   }
-  .logo-cell:hover { background: var(--space-3); }
+  .logo-cell:hover { background: var(--bg-3); }
   .logo-cell .lab-name {
-    font-family: 'Orbitron', monospace;
-    font-size: 12px; font-weight: 500;
-    letter-spacing: 0.16em;
-    color: var(--white);
-    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 36, "wght" 500, "SOFT" 50;
+    font-size: 19px;
+    color: var(--ink);
+    letter-spacing: -0.005em;
   }
   .logo-cell .lab-meta {
-    font-family: 'Inter', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
-    color: var(--white-3);
-    letter-spacing: 0.18em;
+    color: var(--muted);
+    letter-spacing: 0.22em;
     text-transform: uppercase;
   }
 
-  /* ── Section 6: Bottom CTA ────────────────────────────────── */
+  /* ── Section 6: Bottom CTA ───────────────────────── */
   .cta {
     background:
-      radial-gradient(900px 600px at 50% 50%, rgba(100,255,218,0.10), transparent 65%),
-      radial-gradient(600px 400px at 30% 100%, rgba(157,78,221,0.08), transparent 60%),
-      var(--space);
+      radial-gradient(900px 600px at 50% 50%, rgba(181,147,74,0.10), transparent 65%),
+      var(--bg);
     text-align: center;
-    padding: 160px 40px 120px;
+    padding: 180px 40px 140px;
   }
-  .cta-container { max-width: 880px; margin: 0 auto; }
+  .cta-container { max-width: 760px; margin: 0 auto; }
   .cta h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: clamp(40px, 6.5vw, 80px);
+    font-family: 'Fraunces', serif;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 50;
+    font-size: clamp(40px, 6.4vw, 84px);
     line-height: 1;
-    letter-spacing: -0.005em;
-    margin: 0 0 24px;
-    color: var(--white);
+    letter-spacing: -0.03em;
+    margin: 0 0 26px;
+    color: var(--ink);
   }
-  .cta h2 .accent { color: var(--cyan); }
+  .cta h2 em {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 50, "WONK" 1;
+    color: var(--brass);
+  }
   .cta-sub {
     font-family: 'Inter', sans-serif;
-    color: var(--white-2); font-size: 16px;
-    margin: 0 0 48px;
-    line-height: 1.6;
-    font-weight: 300;
+    color: var(--ink-2); font-size: 16px;
+    margin: 0 0 54px;
+    line-height: 1.7;
+    font-weight: 400;
   }
   .signup {
     display: flex; gap: 12px; max-width: 540px; margin: 0 auto;
@@ -493,269 +503,222 @@
     flex: 1; min-width: 220px;
     background: transparent;
     border: 1px solid var(--line-2);
-    border-radius: 4px;
-    padding: 16px 18px;
-    color: var(--white);
+    border-radius: 999px;
+    padding: 16px 22px;
+    color: var(--ink);
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     letter-spacing: 0.02em;
     outline: none;
     transition: border-color .2s ease;
   }
-  .signup input::placeholder { color: var(--white-3); }
-  .signup input:focus { border-color: var(--cyan); }
+  .signup input::placeholder { color: var(--muted); }
+  .signup input:focus { border-color: var(--brass); }
   .signup button {
-    background: var(--cyan);
-    color: var(--space);
-    border: 1px solid var(--cyan);
-    border-radius: 4px;
-    padding: 16px 26px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 0.18em;
+    background: var(--ink);
+    color: var(--bg);
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    padding: 16px 28px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     cursor: pointer;
     transition: all .25s ease;
   }
   .signup button:hover {
-    background: transparent;
-    color: var(--cyan);
+    background: var(--brass); color: var(--bg); border-color: var(--brass);
   }
 
-  /* ── Footer ───────────────────────────────────────────────── */
+  /* ── Footer ──────────────────────────────────────── */
   footer {
-    background: var(--space);
+    background: var(--bg);
     padding: 36px 40px;
     border-top: 1px solid var(--line);
     display: flex; justify-content: space-between; align-items: center;
     flex-wrap: wrap;
     gap: 18px;
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    color: var(--white-3);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
   }
-  footer .copy { letter-spacing: 0.06em; }
-  footer .links { display: flex; gap: 24px; }
-  footer a { color: var(--white-3); text-decoration: none; transition: color .2s; }
-  footer a:hover { color: var(--cyan); }
+  footer .links { display: flex; gap: 28px; }
+  footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
+  footer a:hover { color: var(--brass); }
 
-  /* ── Reveal on scroll ─────────────────────────────────────── */
-  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .9s ease, transform .9s ease; }
+  /* ── Reveal on scroll ────────────────────────────── */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
   .reveal.in { opacity: 1; transform: none; }
 
-  /* ── Responsive ───────────────────────────────────────────── */
   @media (max-width: 900px) {
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
-    section { padding: 80px 22px; }
-    .hero { padding: 110px 22px 60px; }
+    section { padding: 96px 22px; }
+    .hero { padding: 130px 22px 80px; }
     .cards { grid-template-columns: 1fr; }
-    .science-container { grid-template-columns: 1fr; gap: 48px; }
+    .card { padding: 44px 28px; }
+    .how-container { grid-template-columns: 1fr; gap: 56px; }
     .signup { flex-direction: column; }
-    .signup input, .signup button { width: 100%; }
-    .timeline li { grid-template-columns: 1fr; padding-left: 64px; }
-    .timeline::before { left: 19px; }
-    .timeline li::before { width: 40px; height: 40px; font-size: 12px; }
+    .signup input, .signup button { width: 100%; border-radius: 999px; }
+    .timeline li { grid-template-columns: 1fr; padding-left: 72px; }
+    .timeline::before { left: 22px; }
+    .timeline li::before { width: 44px; height: 44px; font-size: 11px; }
   }
 </style>
 </head>
 <body>
 
+<div class="grain" aria-hidden="true"></div>
+
 <nav>
   <a class="brand" href="#hero">
     <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.4"/>
-      <path d="M 22 16 C 22 22, 42 22, 42 32 C 42 42, 22 42, 22 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M 42 16 C 42 22, 22 22, 22 32 C 22 42, 42 42, 42 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <line x1="22" y1="16" x2="42" y2="16" stroke="currentColor" stroke-width="1.4"/>
-      <line x1="22" y1="32" x2="42" y2="32" stroke="currentColor" stroke-width="1.4"/>
-      <line x1="22" y1="48" x2="42" y2="48" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M 22 16 C 22 22, 42 22, 42 32 C 42 42, 22 42, 22 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M 42 16 C 42 22, 22 22, 22 32 C 22 42, 42 42, 42 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="22" y1="16" x2="42" y2="16" stroke="currentColor" stroke-width="1.2"/>
+      <line x1="22" y1="32" x2="42" y2="32" stroke="currentColor" stroke-width="1.2"/>
+      <line x1="22" y1="48" x2="42" y2="48" stroke="currentColor" stroke-width="1.2"/>
     </svg>
     <span>AeonCircle</span>
   </a>
   <div class="nav-links">
-    <a href="#hero">Home</a>
-    <a href="#system">AI System</a>
-    <a href="#science">Biology</a>
-    <a href="#process">Health Data</a>
-    <a href="#research">Research</a>
-    <a href="#cta" class="login">Login</a>
+    <a href="#membership">Membership</a>
+    <a href="#how">How it works</a>
+    <a href="#journey">The Journey</a>
+    <a href="#research">Backing</a>
+    <a href="#cta" class="join">Request invitation</a>
   </div>
 </nav>
 
-<!-- ═══════ Section 1: Hero ═══════ -->
+<!-- ═══════ 1. Hero ═══════ -->
 <section id="hero" class="hero">
-  <div class="dna-bg" aria-hidden="true">
-    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
-      <g>
-        <path class="strand"   d="M 0 200 C 200 100, 400 300, 600 200 C 800 100, 1000 300, 1200 200 C 1400 100, 1600 300, 1800 200"/>
-        <path class="strand"   d="M 0 200 C 200 300, 400 100, 600 200 C 800 300, 1000 100, 1200 200 C 1400 300, 1600 100, 1800 200"/>
-        <path class="strand-2" d="M 0 700 C 200 600, 400 800, 600 700 C 800 600, 1000 800, 1200 700 C 1400 600, 1600 800, 1800 700"/>
-        <path class="strand-2" d="M 0 700 C 200 800, 400 600, 600 700 C 800 800, 1000 600, 1200 700 C 1400 800, 1600 600, 1800 700"/>
-      </g>
-    </svg>
-  </div>
-  <div class="cells" aria-hidden="true">
-    <span class="cell" style="left: 8%;  animation-duration: 24s; animation-delay: 0s;"></span>
-    <span class="cell" style="left: 22%; animation-duration: 30s; animation-delay: 4s;"></span>
-    <span class="cell" style="left: 36%; animation-duration: 28s; animation-delay: 8s;"></span>
-    <span class="cell" style="left: 54%; animation-duration: 34s; animation-delay: 2s;"></span>
-    <span class="cell" style="left: 70%; animation-duration: 26s; animation-delay: 12s;"></span>
-    <span class="cell" style="left: 84%; animation-duration: 32s; animation-delay: 6s;"></span>
-    <span class="cell" style="left: 92%; animation-duration: 38s; animation-delay: 10s;"></span>
-  </div>
+  <div class="hero-ring" aria-hidden="true"></div>
+  <div class="hero-halo" aria-hidden="true"></div>
 
   <div class="hero-content">
-    <p class="hero-eyebrow"><span class="pulse"></span><span>AI · Longevity · Now Forming</span></p>
-    <h1>Live to <span class="with-ai">120</span><br/>with AI</h1>
-    <p class="hero-zh">用 AI，抵达 120 岁生命边界</p>
-    <p class="hero-sub">AI 全周期生命监测 ｜ 基因优化 ｜ 代谢调控 ｜ 衰老逆转 ｜ 个性化延寿方案</p>
+    <p class="eyebrow"><span class="dot"></span><span>Membership · Now Forming</span></p>
+    <h1>Live well.<em>For 120 well-lived years.</em></h1>
+    <p class="hero-sub">A private healthspan club, for everyone who plans to outlive their expectations.</p>
+    <p class="hero-zh">一份私人健康团队的会员 —— 活得久，更要活得好。</p>
     <div class="hero-buttons">
-      <a class="btn-primary" href="#cta">Start Your Life Extension <span class="arrow">→</span></a>
-      <a class="btn-secondary" href="#system">了解 AI 延寿体系</a>
+      <a class="btn-primary" href="#cta">Request invitation <span class="arrow">→</span></a>
+      <a class="btn-secondary" href="#membership">Inside the circle</a>
     </div>
   </div>
 
   <div class="scroll-cue">Scroll</div>
 </section>
 
-<!-- ═══════ Section 2: AI System (3 cards) ═══════ -->
-<section id="system" class="system">
-  <div class="system-container">
-    <p class="section-eyebrow reveal">// 01 — Core System</p>
-    <h2 class="section-title reveal">AI-Driven<br/><span class="accent">Longevity System</span></h2>
+<!-- ═══════ 2. What's in the membership ═══════ -->
+<section id="membership" class="membership">
+  <div class="membership-container">
+    <p class="section-eyebrow reveal">— What you join</p>
+    <h2 class="section-title reveal">Inside the <em>circle.</em></h2>
 
     <div class="cards">
       <div class="card reveal">
-        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-          <path d="M 4 24 L 12 24 L 16 14 L 22 34 L 26 20 L 30 28 L 34 24 L 44 24"/>
-          <circle cx="24" cy="24" r="20" stroke-dasharray="2 4" opacity="0.4"/>
-        </svg>
-        <p class="card-num">001</p>
-        <h3>AI Vital Brain</h3>
-        <p>24h 体征、基因、血液、睡眠、情绪——AI 实时分析、连续建模，预测衰老风险，先于身体的不适。</p>
+        <p class="card-num">N° 01</p>
+        <h3>Your health <em>team</em>.</h3>
+        <p>A standing concierge — physicians, longevity specialists, and a primary advisor who know your file, your habits, and your protocol. They watch the things you'd rather not have to.</p>
       </div>
 
       <div class="card reveal">
-        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-          <circle cx="14" cy="14" r="6"/>
-          <circle cx="34" cy="14" r="6"/>
-          <circle cx="14" cy="34" r="6"/>
-          <circle cx="34" cy="34" r="6"/>
-          <circle cx="24" cy="24" r="6"/>
-          <line x1="18" y1="18" x2="20" y2="20"/>
-          <line x1="30" y1="18" x2="28" y2="20"/>
-          <line x1="18" y1="30" x2="20" y2="28"/>
-          <line x1="30" y1="30" x2="28" y2="28"/>
-        </svg>
-        <p class="card-num">002</p>
-        <h3>Personalized Intervention</h3>
-        <p>AI 定制：营养、代谢、细胞修复、激素平衡、抗衰干预——每一项都根据你的当下状态动态调整。</p>
+        <p class="card-num">N° 02</p>
+        <h3>Curated <em>protocols</em>.</h3>
+        <p>Every regimen — nutrition, metabolic, cellular, hormonal — vetted by the team before it reaches you. No more guessing which study, which supplement, which fad to trust.</p>
       </div>
 
       <div class="card reveal">
-        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-          <rect x="6" y="6" width="36" height="36" rx="2"/>
-          <path d="M 10 36 L 18 28 L 24 32 L 32 20 L 38 24"/>
-          <line x1="10" y1="14" x2="18" y2="14" opacity="0.5"/>
-          <line x1="10" y1="20" x2="14" y2="20" opacity="0.5"/>
-        </svg>
-        <p class="card-num">003</p>
-        <h3>Aging Reversal Database</h3>
-        <p>全球长寿人群样本训练 AI，动态优化你的 120 岁路线图。每一个决策都来自上万个长寿样本的回声。</p>
+        <p class="card-num">N° 03</p>
+        <h3>Aligned <em>protection</em>.</h3>
+        <p>Life insurance and financial products designed around your healthspan. The longer you live well, the more the system pays back into your future.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════ Section 3: Science (left/right) ═══════ -->
-<section id="science" class="science">
-  <div class="science-container">
-    <div class="science-diagram reveal">
-      <svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg">
+<!-- ═══════ 3. How the circle works ═══════ -->
+<section id="how" class="how">
+  <div class="how-container">
+    <div class="how-diagram reveal">
+      <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
-          <linearGradient id="loop" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%"  stop-color="#64FFDA" stop-opacity="0.8"/>
-            <stop offset="100%" stop-color="#64FFDA" stop-opacity="0.1"/>
+          <linearGradient id="brassFade" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%"  stop-color="#B5934A" stop-opacity="0.7"/>
+            <stop offset="100%" stop-color="#B5934A" stop-opacity="0.2"/>
           </linearGradient>
         </defs>
-        <!-- 5 stages -->
-        <g font-family="Orbitron" font-size="11" font-weight="500" letter-spacing="2" fill="#F8FBFF">
-          <g>
-            <rect x="60"  y="50"  width="120" height="56" rx="3" fill="none" stroke="#64FFDA" stroke-width="1.2"/>
-            <text x="120" y="83" text-anchor="middle">GENE</text>
-          </g>
-          <g>
-            <rect x="320" y="50"  width="120" height="56" rx="3" fill="none" stroke="#64FFDA" stroke-width="1.2"/>
-            <text x="380" y="83" text-anchor="middle">CELL</text>
-          </g>
-          <g>
-            <rect x="190" y="180" width="120" height="56" rx="3" fill="none" stroke="#64FFDA" stroke-width="1.6"/>
-            <text x="250" y="208" text-anchor="middle">AI</text>
-            <text x="250" y="223" text-anchor="middle" font-size="8" opacity="0.7">ENGINE</text>
-          </g>
-          <g>
-            <rect x="60"  y="310" width="120" height="56" rx="3" fill="none" stroke="#64FFDA" stroke-width="1.2"/>
-            <text x="120" y="343" text-anchor="middle">METABOLISM</text>
-          </g>
-          <g>
-            <rect x="320" y="310" width="120" height="56" rx="3" fill="none" stroke="#64FFDA" stroke-width="1.2"/>
-            <text x="380" y="343" text-anchor="middle">ORGAN</text>
-          </g>
+
+        <!-- Four concentric rings — the circle metaphor -->
+        <circle cx="210" cy="210" r="200" fill="none" stroke="#B5934A" stroke-opacity="0.35" stroke-width="1"/>
+        <circle cx="210" cy="210" r="155" fill="none" stroke="#B5934A" stroke-opacity="0.45" stroke-width="1"/>
+        <circle cx="210" cy="210" r="105" fill="none" stroke="#B5934A" stroke-opacity="0.55" stroke-width="1"/>
+        <circle cx="210" cy="210" r="55" fill="none" stroke="#B5934A" stroke-opacity="0.7" stroke-width="1.2"/>
+
+        <!-- Center: YOU -->
+        <text x="210" y="216" text-anchor="middle"
+              font-family="Fraunces, serif" font-style="italic"
+              font-size="22" fill="#EFEAD8" font-weight="500">you</text>
+
+        <!-- Ring labels (positioned at top of each ring) -->
+        <g font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="3" fill="#B5934A" text-transform="uppercase">
+          <text x="210" y="115" text-anchor="middle">TEAM</text>
+          <text x="210" y="65"  text-anchor="middle">PROTOCOLS</text>
+          <text x="210" y="20"  text-anchor="middle">PROTECTION</text>
         </g>
-        <!-- Connecting lines through AI center -->
-        <g stroke="#64FFDA" stroke-width="1" fill="none" opacity="0.6" stroke-dasharray="3 3">
-          <line x1="120" y1="106" x2="220" y2="180"/>
-          <line x1="380" y1="106" x2="280" y2="180"/>
-          <line x1="220" y1="236" x2="120" y2="310"/>
-          <line x1="280" y1="236" x2="380" y2="310"/>
+
+        <!-- Small brass dots on each ring -->
+        <g fill="#B5934A">
+          <circle cx="210" cy="155" r="3"/>
+          <circle cx="210" cy="105" r="3"/>
+          <circle cx="210" cy="55"  r="3"/>
+          <circle cx="210" cy="10"  r="3"/>
         </g>
-        <!-- Closed loop arc -->
-        <path d="M 120 366 Q 60 380, 60 250 Q 60 90, 120 50" fill="none" stroke="url(#loop)" stroke-width="1.2" opacity="0.6"/>
-        <path d="M 380 366 Q 440 380, 440 250 Q 440 90, 380 50" fill="none" stroke="url(#loop)" stroke-width="1.2" opacity="0.6"/>
-        <!-- Soft nodes -->
-        <g fill="#64FFDA">
-          <circle cx="120" cy="106" r="2.5"/>
-          <circle cx="380" cy="106" r="2.5"/>
-          <circle cx="120" cy="310" r="2.5"/>
-          <circle cx="380" cy="310" r="2.5"/>
-          <circle cx="250" cy="180" r="3.5"/>
-          <circle cx="250" cy="236" r="3.5"/>
+
+        <!-- Faint orbital path indicators on inner ring -->
+        <g fill="rgba(181,147,74,0.5)">
+          <circle cx="155" cy="210" r="2.5"/>
+          <circle cx="265" cy="210" r="2.5"/>
+          <circle cx="210" cy="265" r="2.5"/>
         </g>
       </svg>
     </div>
-    <div class="science-text">
-      <p class="section-eyebrow reveal">// 02 — Architecture</p>
-      <h2 class="reveal">The Science<br/>Behind <span class="num">120</span></h2>
-      <p class="reveal">AI 不只是管理健康——它在<strong>重构人体的衰老时钟</strong>。</p>
-      <p class="reveal">延缓细胞端粒损耗，修复 DNA 损伤，维持年轻生理机能至百岁以上。从基因到器官，每一层都被持续学习、持续调整。</p>
-      <p class="reveal">这是一个<strong>闭环系统</strong>，不是一份建议表。</p>
+    <div class="how-text">
+      <p class="section-eyebrow reveal">— How the circle works</p>
+      <h2 class="reveal">Built <em>around you.</em></h2>
+      <p class="reveal">What was once a <em>privilege of the few</em> — a private health team, curated protocols, financial products that bet on your longevity — is now a single membership.</p>
+      <p class="reveal">The circle keeps it running. <strong>You live well.</strong></p>
+      <p class="reveal">Every layer — your team, your protocols, your protection — wraps around the same center: you.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════ Section 4: Process timeline ═══════ -->
-<section id="process" class="process">
-  <div class="process-container">
-    <p class="section-eyebrow reveal">// 03 — Your Journey</p>
-    <h2 class="section-title reveal">From Day One<br/>to <span class="accent">Year 120</span></h2>
+<!-- ═══════ 4. The journey ═══════ -->
+<section id="journey" class="journey">
+  <div class="journey-container">
+    <p class="section-eyebrow reveal">— The journey</p>
+    <h2 class="section-title reveal">From <em>day one</em><br/>to year one hundred and twenty.</h2>
 
     <ol class="timeline">
-      <li class="reveal"><span class="step-title">AI 全身体检与建模</span><span class="step-meta">DAY 01</span></li>
-      <li class="reveal"><span class="step-title">生成专属延寿模型</span><span class="step-meta">WEEK 01</span></li>
-      <li class="reveal"><span class="step-title">每日 AI 健康指令</span><span class="step-meta">DAILY</span></li>
-      <li class="reveal"><span class="step-title">月度生物干预调整</span><span class="step-meta">MONTHLY</span></li>
-      <li class="reveal"><span class="step-title">年度基因优化升级</span><span class="step-meta">ANNUAL</span></li>
-      <li class="reveal"><span class="step-title">抵达 120 岁健康生命周期</span><span class="step-meta">∞</span></li>
+      <li class="reveal"><span class="step-title">Personal onboarding</span><span class="step-meta">DAY 01</span></li>
+      <li class="reveal"><span class="step-title">A plan built around you</span><span class="step-meta">WEEK 01</span></li>
+      <li class="reveal"><span class="step-title">Daily structure, gently guided</span><span class="step-meta">DAILY</span></li>
+      <li class="reveal"><span class="step-title">Quarterly review with your team</span><span class="step-meta">QUARTERLY</span></li>
+      <li class="reveal"><span class="step-title">Annual recalibration</span><span class="step-meta">YEAR ON YEAR</span></li>
+      <li class="reveal"><span class="step-title">A century, well-lived</span><span class="step-meta">∞</span></li>
     </ol>
   </div>
 </section>
 
-<!-- ═══════ Section 5: Research backing ═══════ -->
+<!-- ═══════ 5. Backing ═══════ -->
 <section id="research" class="research">
   <div class="research-container">
-    <p class="research-tag reveal">// Backed by Longevity Science &amp; AI Research</p>
+    <p class="research-tag reveal">— Backed by longevity science</p>
     <div class="logos">
       <div class="logo-cell reveal">
         <span class="lab-name">Buck Institute</span>
@@ -767,23 +730,15 @@
       </div>
       <div class="logo-cell reveal">
         <span class="lab-name">Calico</span>
-        <span class="lab-meta">Longevity AI</span>
-      </div>
-      <div class="logo-cell reveal">
-        <span class="lab-name">Insilico</span>
-        <span class="lab-meta">AI Drug Discovery</span>
+        <span class="lab-meta">Longevity</span>
       </div>
       <div class="logo-cell reveal">
         <span class="lab-name">Tally Health</span>
         <span class="lab-meta">Biomarker Science</span>
       </div>
       <div class="logo-cell reveal">
-        <span class="lab-name">Loyal</span>
-        <span class="lab-meta">Lifespan Protocols</span>
-      </div>
-      <div class="logo-cell reveal">
         <span class="lab-name">Function</span>
-        <span class="lab-meta">Continuous Biomarker</span>
+        <span class="lab-meta">Continuous Health</span>
       </div>
       <div class="logo-cell reveal">
         <span class="lab-name">Levels</span>
@@ -793,35 +748,33 @@
   </div>
 </section>
 
-<!-- ═══════ Section 6: Bottom CTA ═══════ -->
+<!-- ═══════ 6. CTA ═══════ -->
 <section id="cta" class="cta">
   <div class="cta-container">
-    <h2 class="reveal">Your <span class="accent">120-Year Life</span><br/>Starts Here</h2>
-    <p class="cta-sub reveal">输入邮箱，获取 AI 延寿评估 · We&rsquo;ll send a private invitation when the system opens.</p>
-    <form class="signup reveal" onsubmit="event.preventDefault(); window.location='mailto:angel.alipay2011@gmail.com?subject=AeonCircle%20Assessment&body='+encodeURIComponent('My email: ' + this.elements.email.value);">
+    <h2 class="reveal">Your <em>circle</em><br/>is forming.</h2>
+    <p class="cta-sub reveal">Founding membership opens 2026. Leave an email — when the doors are ready, we&rsquo;ll send you a private invitation.</p>
+    <form class="signup reveal" onsubmit="event.preventDefault(); window.location='mailto:angel.alipay2011@gmail.com?subject=AeonCircle%20%E2%80%94%20Invitation%20request&body='+encodeURIComponent('My email: ' + this.elements.email.value);">
       <input type="email" name="email" placeholder="your@email.com" required />
-      <button type="submit">Get Assessment</button>
+      <button type="submit">Request invitation</button>
     </form>
   </div>
 </section>
 
 <footer>
-  <div class="copy">© 2026 AeonCircle · The Healthspan Club</div>
+  <div>© 2026 AeonCircle · The Healthspan Club</div>
   <div class="links">
-    <a href="#">隐私 · Privacy</a>
-    <a href="#">科学声明 · Science</a>
-    <a href="#">生物安全 · Biosafety</a>
-    <a href="mailto:angel.alipay2011@gmail.com">联系 · Contact</a>
+    <a href="#">Privacy</a>
+    <a href="#">Science</a>
+    <a href="#">Biosafety</a>
+    <a href="mailto:angel.alipay2011@gmail.com">Contact</a>
   </div>
 </footer>
 
 <script>
-  // Reveal-on-scroll
-  const reveals = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver(es => {
     es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-  reveals.forEach(r => obs.observe(r));
+  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
 </script>
 
 </body>
