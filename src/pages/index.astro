@@ -7,28 +7,28 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AeonCircle — Live well, for 120 years.</title>
-<meta name="description" content="The wealthy have private health teams. AeonCircle gives one to everyone else — a membership built for your healthspan." />
+<meta name="description" content="The few have private health teams. AeonCircle is for everyone else — a healthspan membership built for 120 well-lived years." />
 <link rel="canonical" href="https://aeoncircle.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://aeoncircle.com/" />
-<meta property="og:title" content="AeonCircle — Live well, for 120 years." />
-<meta property="og:description" content="The wealthy have private health teams. AeonCircle gives one to everyone else. You live well. We do the thinking." />
+<meta property="og:title" content="AeonCircle — Live well." />
+<meta property="og:description" content="For 120 well-lived years. The few have private health teams. AeonCircle is for everyone else." />
 <meta property="og:site_name" content="AeonCircle" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="AeonCircle — Live well, for 120 years." />
-<meta name="twitter:description" content="The wealthy have private health teams. AeonCircle gives one to everyone else." />
+<meta name="twitter:title" content="AeonCircle — Live well." />
+<meta name="twitter:description" content="For 120 well-lived years. The few have private health teams. AeonCircle is for everyone else." />
 <meta name="theme-color" content="#EAE4D6" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #EAE4D6;
+    --bg: #EAE4D6;          /* warm cream */
     --bg-2: #E2DBC9;
-    --ink: #1B1A14;
+    --ink: #1B1A14;         /* deep warm near-black */
     --ink-2: #57544C;
     --muted: #8B8674;
-    --accent: #2A4D3C;
+    --accent: #2A4D3C;      /* deep forest emerald — used sparingly */
     --line: rgba(27,26,20,0.10);
   }
   * { box-sizing: border-box; }
@@ -56,12 +56,14 @@
     pointer-events: none;
     mix-blend-mode: multiply;
   }
+
   .wrap {
     position: relative; z-index: 2;
     min-height: 100vh;
     display: flex; flex-direction: column;
     padding: 0;
   }
+
   header {
     display: flex; justify-content: space-between; align-items: center;
     padding: 32px 40px;
@@ -81,6 +83,7 @@
     font-size: 11px; letter-spacing: 0.22em;
     text-transform: uppercase;
   }
+
   main {
     flex: 1;
     display: flex; flex-direction: column;
@@ -89,6 +92,7 @@
     padding: 40px 24px 96px;
     position: relative;
   }
+
   .eyebrow {
     display: inline-flex; align-items: center; gap: 12px;
     margin-bottom: 56px;
@@ -105,22 +109,28 @@
     0%, 100% { opacity: 0.45; }
     50%      { opacity: 1; }
   }
+
+  /* H1: the promise itself, oversized serif */
   h1 {
     font-family: 'Newsreader', serif;
     font-size: clamp(56px, 11vw, 144px);
     line-height: 0.98;
-    margin: 0 0 56px;
+    margin: 0 0 14px;
     font-variation-settings: "opsz" 144, "wght" 400;
     letter-spacing: -0.035em;
     color: var(--ink);
-    max-width: 14ch;
   }
-  h1 em {
-    display: block;
+  .subhead {
+    font-family: 'Newsreader', serif;
     font-style: italic;
-    font-variation-settings: "opsz" 144, "wght" 400;
+    font-variation-settings: "opsz" 60, "wght" 400;
+    font-size: clamp(20px, 2.4vw, 30px);
     color: var(--accent);
+    letter-spacing: -0.01em;
+    margin: 0 auto 64px;
+    line-height: 1.3;
   }
+
   .pitch {
     font-family: 'Newsreader', serif;
     font-variation-settings: "opsz" 30, "wght" 400;
@@ -132,6 +142,7 @@
     letter-spacing: -0.005em;
   }
   .pitch strong { font-variation-settings: "opsz" 30, "wght" 500; font-weight: 500; }
+
   .promise {
     font-family: 'Newsreader', serif;
     font-style: italic;
@@ -141,12 +152,16 @@
     margin: 0 auto 64px;
     letter-spacing: 0;
   }
+
+  /* hairline divider — the single accent flourish */
   .rule {
     width: 28px; height: 1px;
     background: var(--accent);
     margin: 0 auto 64px;
     opacity: 0.6;
   }
+
+  /* CTA */
   .cta-row { display: flex; flex-direction: column; align-items: center; gap: 16px; }
   .cta {
     background: var(--ink);
@@ -173,6 +188,7 @@
     font-size: 10.5px; letter-spacing: 0.22em;
     text-transform: uppercase;
   }
+
   footer {
     padding: 28px 40px;
     display: flex; justify-content: space-between; align-items: center;
@@ -187,6 +203,8 @@
     transition: color .25s;
   }
   footer a:hover { color: var(--accent); }
+
+  /* Entrance */
   .fade { opacity: 0; transform: translateY(12px); animation: fade 1.1s ease forwards; }
   .fade.d1 { animation-delay: .15s; }
   .fade.d2 { animation-delay: .35s; }
@@ -195,12 +213,14 @@
   .fade.d5 { animation-delay: 1.10s; }
   .fade.d6 { animation-delay: 1.35s; }
   @keyframes fade { to { opacity: 1; transform: none; } }
+
   @media (max-width: 720px) {
-    header, footer { padding: 22px; flex-direction: column; gap: 10px; }
+    header, footer { padding: 22px 22px; flex-direction: column; gap: 10px; }
     footer { flex-direction: row; }
     main { padding: 24px 22px 72px; }
     .eyebrow { margin-bottom: 36px; }
-    h1 { margin-bottom: 40px; }
+    h1 { margin-bottom: 10px; }
+    .subhead { margin-bottom: 40px; }
     .promise { margin-bottom: 44px; }
     .rule { margin-bottom: 44px; }
   }
@@ -208,6 +228,7 @@
 </head>
 <body>
   <div class="bg"></div>
+
   <div class="wrap">
     <header class="fade">
       <div class="brand">
@@ -223,23 +244,27 @@
       </div>
       <div class="header-meta">The Healthspan Club</div>
     </header>
+
     <main>
       <div class="eyebrow fade d1">
         <span class="dot"></span>
         <span>Membership · Now Forming</span>
       </div>
-      <h1 class="fade d2">
-        Live well.
-        <em>For 120 years.</em>
-      </h1>
+
+      <h1 class="fade d2">Live well.</h1>
+      <p class="subhead fade d2">For 120 well-lived years.</p>
+
       <p class="pitch fade d3">
-        The wealthy have private health teams.<br/>
-        AeonCircle gives one to <strong>everyone else</strong>.
+        The few have private health teams.<br/>
+        AeonCircle is for <strong>everyone else</strong>.
       </p>
+
       <p class="promise fade d4">
         You live well. We do the thinking.
       </p>
+
       <div class="rule fade d5"></div>
+
       <div class="cta-row fade d5">
         <a class="cta" href="mailto:angel.alipay2011@gmail.com?subject=AeonCircle%20%E2%80%94%20Invitation%20request&amp;body=Hi%20%E2%80%94%20I%27d%20like%20to%20join%20the%20founding%20circle.%0A%0AA%20little%20about%20me%3A%0A">
           <span class="label">Request invitation</span>
@@ -248,6 +273,7 @@
         <span class="cta-note">By invitation · Opens 2026</span>
       </div>
     </main>
+
     <footer class="fade d6">
       <div>© 2026 AeonCircle</div>
       <div><a href="mailto:angel.alipay2011@gmail.com">angel.alipay2011@gmail.com</a></div>
