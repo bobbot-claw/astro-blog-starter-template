@@ -1,22 +1,22 @@
 ---
-// AeonCircle — Coming Soon page
+// AeonCircle — Healthspan for everyone
 ---
 <!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AeonCircle — Coming Soon</title>
-<meta name="description" content="AeonCircle — 一个即将到来的项目。关于连接、沉淀，与长期主义。" />
+<title>AeonCircle — Healthspan for everyone</title>
+<meta name="description" content="把只属于少数人的私人健康团队，做成每一个人都能拥有的服务。AeonCircle 严选经过验证的健康方案，让真正有效的健康改善，普通人也用得对、用得起。" />
 <link rel="canonical" href="https://aeoncircle.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://aeoncircle.com/" />
-<meta property="og:title" content="AeonCircle — Coming Soon" />
-<meta property="og:description" content="在时间的尺度上，构建一个值得停留的圆。" />
+<meta property="og:title" content="AeonCircle — Healthspan for everyone" />
+<meta property="og:description" content="Live well — for 120 years. 把只属于少数人的私人健康团队，做成每一个人都能拥有的服务。" />
 <meta property="og:site_name" content="AeonCircle" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="AeonCircle — Coming Soon" />
-<meta name="twitter:description" content="在时间的尺度上，构建一个值得停留的圆。" />
+<meta name="twitter:title" content="AeonCircle — Healthspan for everyone" />
+<meta name="twitter:description" content="Live well — for 120 years. 把只属于少数人的私人健康团队，做成每一个人都能拥有的服务。" />
 <meta name="theme-color" content="#07070b" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -157,18 +157,47 @@
     background-clip: text;
     color: transparent;
   }
-  .slogan {
-    font-size: clamp(16px, 1.8vw, 20px);
-    color: var(--muted);
-    max-width: 640px;
-    margin: 0 auto;
-    line-height: 1.7;
+
+  .lead {
+    font-family: 'Noto Serif SC', 'Inter', serif;
+    font-size: clamp(22px, 2.6vw, 30px);
+    color: var(--fg);
+    font-weight: 500;
+    letter-spacing: 0;
+    margin: 4px 0 22px;
+    line-height: 1.3;
   }
-  .slogan strong { color: var(--fg); font-weight: 500; }
+  .lead em {
+    font-style: normal;
+    background: linear-gradient(120deg, var(--accent) 0%, #f3e3b3 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .slogan {
+    font-size: clamp(16px, 1.7vw, 19px);
+    color: var(--fg);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.75;
+  }
+  .slogan .em { color: var(--accent); font-weight: 500; }
+
+  .subline {
+    margin-top: 30px;
+    font-size: clamp(13px, 1.2vw, 14px);
+    color: var(--muted);
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.85;
+    opacity: 0.85;
+  }
 
   .meta-row {
     margin-top: 56px;
-    display: flex; gap: 32px;
+    display: flex; gap: 28px;
     color: var(--muted);
     font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
     flex-wrap: wrap; justify-content: center;
@@ -192,6 +221,7 @@
   .fade.d2 { animation-delay: .35s; }
   .fade.d3 { animation-delay: .55s; }
   .fade.d4 { animation-delay: .75s; }
+  .fade.d5 { animation-delay: .95s; }
   @keyframes fade { to { opacity: 1; transform: none; } }
 
   @media (max-width: 640px) {
@@ -215,34 +245,43 @@
         <span class="brand-mark"></span>
         <span>AeonCircle</span>
       </div>
-      <div class="nav-meta">EST. 2026 · COMING SOON</div>
+      <div class="nav-meta">Healthspan · Coming Soon</div>
     </header>
 
     <main>
       <div class="eyebrow fade d1">
         <span class="pulse"></span>
-        <span>A new chapter is forming</span>
+        <span>Healthspan · For everyone</span>
       </div>
 
       <h1 class="fade d2">
         Aeon<span class="accent">Circle</span>
       </h1>
 
+      <p class="lead fade d3">Live well — for <em>120 years</em>.</p>
+
       <p class="slogan fade d3">
-        在时间的尺度上，构建一个值得停留的<strong>圆</strong>。<br/>
-        AeonCircle 是一个正在准备中的项目 —
-        关于<strong>连接</strong>、<strong>沉淀</strong>，与<strong>长期主义</strong>。
+        活得久，更要<span class="em">活得好</span>。<br/>
+        把只属于少数人的<span class="em">私人健康团队</span>，<br/>
+        做成每一个人都能拥有的服务。
       </p>
 
-      <div class="meta-row fade d4">
-        <span>Idea</span>
-        <span>Design</span>
-        <span>Build</span>
-        <span>Soon</span>
+      <p class="subline fade d4">
+        生命科技正在爆发，但产品良莠不齐 ——<br/>
+        真正有效的方案，需要专业筛选与个性化匹配。<br/>
+        AeonCircle 把这件事认真做实，<br/>
+        让你不用钻研，也能用得对、用得起。
+      </p>
+
+      <div class="meta-row fade d5">
+        <span>Trusted</span>
+        <span>Personalized</span>
+        <span>Affordable</span>
+        <span>Healthspan 120</span>
       </div>
     </main>
 
-    <footer class="fade d4">
+    <footer class="fade d5">
       <div>© 2026 <a href="https://aeoncircle.com/">aeoncircle.com</a></div>
       <div><a href="mailto:dayong.zhang@gmail.com">Get in touch →</a></div>
     </footer>
