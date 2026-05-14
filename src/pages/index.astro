@@ -1,50 +1,251 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+// AeonCircle — Coming Soon page
 ---
-
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AeonCircle — Coming Soon</title>
+<meta name="description" content="AeonCircle — 一个即将到来的项目。关于连接、沉淀，与长期主义。" />
+<link rel="canonical" href="https://aeoncircle.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://aeoncircle.com/" />
+<meta property="og:title" content="AeonCircle — Coming Soon" />
+<meta property="og:description" content="在时间的尺度上，构建一个值得停留的圆。" />
+<meta property="og:site_name" content="AeonCircle" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AeonCircle — Coming Soon" />
+<meta name="twitter:description" content="在时间的尺度上，构建一个值得停留的圆。" />
+<meta name="theme-color" content="#07070b" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #07070b;
+    --bg-2: #0d0d14;
+    --fg: #ECECF1;
+    --muted: #8b8b97;
+    --accent: #c9b27a;
+    --accent-2: #6b8afd;
+    --ring: rgba(201, 178, 122, 0.45);
+    --line: rgba(255,255,255,0.08);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+  }
+  .bg {
+    position: fixed; inset: 0; z-index: 0; overflow: hidden;
+    background:
+      radial-gradient(1200px 700px at 50% 110%, rgba(107,138,253,0.10), transparent 60%),
+      radial-gradient(800px 500px at 80% 0%, rgba(201,178,122,0.07), transparent 60%),
+      linear-gradient(180deg, #06060a 0%, #0a0a12 100%);
+  }
+  .bg::after {
+    content: "";
+    position: absolute; inset: -2px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.6;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+  .rings {
+    position: absolute; left: 50%; top: 50%;
+    width: min(90vmin, 820px); aspect-ratio: 1/1;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .ring {
+    position: absolute; inset: 0;
+    border: 1px solid rgba(201,178,122,0.15);
+    border-radius: 50%;
+    animation: spin 60s linear infinite;
+  }
+  .ring.r2 { inset: 8%; border-color: rgba(107,138,253,0.12); animation-duration: 90s; animation-direction: reverse; }
+  .ring.r3 { inset: 18%; border-color: rgba(255,255,255,0.05); animation-duration: 120s; }
+  .ring.r4 { inset: 28%; border-style: dashed; border-color: rgba(201,178,122,0.10); animation-duration: 150s; animation-direction: reverse; }
+  .ring .dot {
+    position: absolute; left: 50%; top: -3px;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+    transform: translateX(-50%);
+    box-shadow: 0 0 18px var(--ring);
+  }
+  .ring.r2 .dot { background: var(--accent-2); box-shadow: 0 0 18px rgba(107,138,253,0.5); }
+  @keyframes spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+
+  .wrap {
+    position: relative; z-index: 2;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+  }
+  header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 28px 40px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 600; letter-spacing: 0.5px;
+  }
+  .brand-mark {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 1.5px solid var(--accent);
+    position: relative;
+  }
+  .brand-mark::before {
+    content: ""; position: absolute; inset: 4px;
+    border-radius: 50%; background: var(--accent);
+    opacity: 0.85;
+  }
+  .nav-meta {
+    color: var(--muted); font-size: 13px; letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  main {
+    flex: 1;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 60px 24px 80px;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+    backdrop-filter: blur(8px);
+  }
+  .eyebrow .pulse {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 var(--ring);
+    animation: pulse 2.2s ease-out infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(201,178,122,0.5); }
+    100% { box-shadow: 0 0 0 14px rgba(201,178,122,0); }
+  }
+
+  h1 {
+    font-family: 'Noto Serif SC', 'Inter', serif;
+    font-size: clamp(56px, 11vw, 156px);
+    line-height: 0.95;
+    margin: 28px 0 18px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    background: linear-gradient(180deg, #ffffff 0%, #b9b9c4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  h1 .accent {
+    background: linear-gradient(120deg, var(--accent) 0%, #f3e3b3 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .slogan {
+    font-size: clamp(16px, 1.8vw, 20px);
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  .slogan strong { color: var(--fg); font-weight: 500; }
+
+  .meta-row {
+    margin-top: 56px;
+    display: flex; gap: 32px;
+    color: var(--muted);
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    flex-wrap: wrap; justify-content: center;
+  }
+  .meta-row span { display: inline-flex; align-items: center; gap: 8px; }
+  .meta-row span::before {
+    content: ""; width: 4px; height: 4px; background: var(--accent); border-radius: 50%;
+  }
+
+  footer {
+    padding: 28px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--muted); font-size: 12px; letter-spacing: 0.1em;
+    border-top: 1px solid var(--line);
+  }
+  footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
+  footer a:hover { color: var(--fg); }
+
+  .fade { opacity: 0; transform: translateY(12px); animation: fade .9s ease forwards; }
+  .fade.d1 { animation-delay: .15s; }
+  .fade.d2 { animation-delay: .35s; }
+  .fade.d3 { animation-delay: .55s; }
+  .fade.d4 { animation-delay: .75s; }
+  @keyframes fade { to { opacity: 1; transform: none; } }
+
+  @media (max-width: 640px) {
+    header, footer { padding: 20px; }
+    .meta-row { gap: 18px; margin-top: 40px; }
+  }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="rings" aria-hidden="true">
+    <div class="ring r1"><span class="dot"></span></div>
+    <div class="ring r2"><span class="dot"></span></div>
+    <div class="ring r3"></div>
+    <div class="ring r4"></div>
+  </div>
+
+  <div class="wrap">
+    <header class="fade">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span>AeonCircle</span>
+      </div>
+      <div class="nav-meta">EST. 2026 · COMING SOON</div>
+    </header>
+
+    <main>
+      <div class="eyebrow fade d1">
+        <span class="pulse"></span>
+        <span>A new chapter is forming</span>
+      </div>
+
+      <h1 class="fade d2">
+        Aeon<span class="accent">Circle</span>
+      </h1>
+
+      <p class="slogan fade d3">
+        在时间的尺度上，构建一个值得停留的<strong>圆</strong>。<br/>
+        AeonCircle 是一个正在准备中的项目 —
+        关于<strong>连接</strong>、<strong>沉淀</strong>，与<strong>长期主义</strong>。
+      </p>
+
+      <div class="meta-row fade d4">
+        <span>Idea</span>
+        <span>Design</span>
+        <span>Build</span>
+        <span>Soon</span>
+      </div>
+    </main>
+
+    <footer class="fade d4">
+      <div>© 2026 <a href="https://aeoncircle.com/">aeoncircle.com</a></div>
+      <div><a href="mailto:dayong.zhang@gmail.com">Get in touch →</a></div>
+    </footer>
+  </div>
+</body>
 </html>
