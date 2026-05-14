@@ -1,5 +1,5 @@
 ---
-// AeonCircle — The Healthspan Club
+// AeonCircle — The Healthspan Club (Substance edition)
 ---
 <!doctype html>
 <html lang="en">
@@ -17,27 +17,28 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="AeonCircle — Live well, for 120 years." />
 <meta name="twitter:description" content="The healthspan club. One membership. We do the thinking. You live well." />
-<meta name="theme-color" content="#FBF7EE" />
+<meta name="theme-color" content="#F0E6CC" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,75..125,100..900;1,75..125,100..900&family=IBM+Plex+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #FBF7EE;
-    --bg-2: #F3E8D5;
-    --fg: #1F3D32;
-    --fg-2: #355745;
-    --muted: #7A8B7F;
-    --accent: #D17B47;
-    --accent-2: #5C8973;
-    --accent-3: #E89C68;
-    --line: rgba(31, 61, 50, 0.12);
+    --bg: #F0E6CC;
+    --bg-deep: #E8DDC0;
+    --ink: #0E0E10;
+    --ink-2: #2A2925;
+    --muted: #6E6856;
+    --yellow: #F4C12B;
+    --yellow-soft: #FFD93D;
+    --yellow-deep: #D9A91A;
+    --aqua: #4DA6B0;
+    --line: rgba(14, 14, 16, 0.12);
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body {
     background: var(--bg);
-    color: var(--fg);
+    color: var(--ink);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -47,203 +48,242 @@
   .bg {
     position: fixed; inset: 0; z-index: 0; overflow: hidden;
     background:
-      radial-gradient(1000px 700px at 50% 110%, rgba(92,137,115,0.20), transparent 65%),
-      radial-gradient(800px 500px at 80% -5%, rgba(209,123,71,0.12), transparent 60%),
-      radial-gradient(600px 500px at 15% 30%, rgba(232,156,104,0.08), transparent 65%),
+      radial-gradient(900px 700px at 50% 110%, rgba(244,193,43,0.18), transparent 65%),
+      radial-gradient(700px 500px at 50% -10%, rgba(244,193,43,0.10), transparent 60%),
       var(--bg);
   }
   .bg::after {
     content: "";
     position: absolute; inset: -2px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.12  0 0 0 0 0.24  0 0 0 0 0.20  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.06  0 0 0 0 0.05  0 0 0 0 0.04  0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
     opacity: 0.7;
     pointer-events: none;
     mix-blend-mode: multiply;
   }
+  .topbar, .botbar {
+    position: relative; z-index: 3;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    background: var(--bg);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; font-weight: 400;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ink);
+    padding: 8px 20px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    overflow: hidden; white-space: nowrap;
+  }
+  .topbar span, .botbar span { display: inline-flex; align-items: center; gap: 8px; }
+  .topbar .dot, .botbar .dot {
+    display: inline-block; width: 7px; height: 7px;
+    background: var(--yellow); border: 1px solid var(--ink);
+    border-radius: 50%;
+  }
   .halo {
-    position: absolute; left: 50%; top: 50%;
-    width: min(70vmin, 620px); aspect-ratio: 1/1;
+    position: absolute; left: 50%; top: 52%;
+    width: min(80vmin, 720px); aspect-ratio: 1/1;
     transform: translate(-50%, -50%);
     background: radial-gradient(circle,
-      rgba(209,123,71,0.22) 0%,
-      rgba(232,156,104,0.10) 35%,
-      rgba(92,137,115,0.05) 60%,
+      rgba(244,193,43,0.30) 0%,
+      rgba(244,193,43,0.12) 35%,
+      rgba(244,193,43,0.02) 60%,
       transparent 75%);
     border-radius: 50%;
-    filter: blur(30px);
+    filter: blur(36px);
     animation: breathe 9s ease-in-out infinite;
     pointer-events: none;
     z-index: 1;
   }
   @keyframes breathe {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.85; }
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.9; }
     50%      { transform: translate(-50%, -50%) scale(1.10); opacity: 1; }
   }
-  .rings {
-    position: absolute; left: 50%; top: 50%;
-    width: min(85vmin, 780px); aspect-ratio: 1/1;
+  .watermark {
+    position: absolute; left: 50%; top: 52%;
+    width: min(78vmin, 680px); aspect-ratio: 1/1;
     transform: translate(-50%, -50%);
-    z-index: 1;
-    pointer-events: none;
+    pointer-events: none; z-index: 1;
+    opacity: 0.10;
+    color: var(--ink);
+    animation: rotate-slow 90s linear infinite;
   }
-  .ring {
-    position: absolute; inset: 0;
-    border: 1px solid rgba(31, 61, 50, 0.14);
-    border-radius: 50%;
-    animation: spin 80s linear infinite;
+  @keyframes rotate-slow {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
   }
-  .ring.r2 { inset: 8%;  border-color: rgba(92,137,115,0.22); animation-duration: 110s; animation-direction: reverse; }
-  .ring.r3 { inset: 18%; border: 1px dashed rgba(209,123,71,0.18); animation-duration: 140s; }
-  .ring.r4 { inset: 28%; border-color: rgba(31,61,50,0.08); animation-duration: 170s; animation-direction: reverse; }
-  .ring .dot {
-    position: absolute; left: 50%; top: -4px;
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--accent);
-    transform: translateX(-50%);
-    box-shadow: 0 0 16px rgba(209,123,71,0.6);
+  .dna-side {
+    position: absolute; top: 0; bottom: 0;
+    width: 80px;
+    pointer-events: none; z-index: 1;
+    opacity: 0.18;
+    color: var(--ink);
   }
-  .ring.r2 .dot { background: var(--accent-2); box-shadow: 0 0 16px rgba(92,137,115,0.6); }
-  @keyframes spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+  .dna-side.left  { left: 0; }
+  .dna-side.right { right: 0; transform: scaleX(-1); }
 
-  .wrap { position: relative; z-index: 2; min-height: 100vh; display: flex; flex-direction: column; }
+  .wrap {
+    position: relative; z-index: 2;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+  }
   header {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 28px 40px;
+    padding: 22px 40px;
   }
   .brand {
-    display: flex; align-items: center; gap: 10px;
-    font-family: 'Fraunces', serif;
-    font-weight: 500; font-size: 17px; letter-spacing: 0;
-    color: var(--fg);
+    display: flex; align-items: center; gap: 12px;
+    font-family: 'Anybody', sans-serif;
+    font-weight: 700;
+    font-variation-settings: "wdth" 115, "wght" 700;
+    font-size: 17px; letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink);
   }
-  .brand-mark {
-    width: 22px; height: 22px; border-radius: 50%;
-    border: 1.5px solid var(--accent);
-    position: relative;
-  }
-  .brand-mark::before {
-    content: ""; position: absolute; inset: 4px;
-    border-radius: 50%; background: var(--accent);
-  }
+  .logo-mark { width: 30px; height: 30px; color: var(--ink); }
   .nav-meta {
-    color: var(--fg-2);
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--ink);
     font-size: 11px; letter-spacing: 0.22em;
-    text-transform: uppercase; opacity: 0.8;
+    text-transform: uppercase; opacity: 0.85;
+  }
+  .nav-meta::before {
+    content: ""; display: inline-block;
+    width: 7px; height: 7px;
+    background: var(--yellow);
+    border: 1px solid var(--ink);
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: -1px;
   }
   main {
     flex: 1;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     text-align: center;
-    padding: 40px 24px 80px;
+    padding: 48px 24px 80px;
+    position: relative;
   }
   .eyebrow {
     display: inline-flex; align-items: center; gap: 10px;
-    padding: 7px 16px;
-    border: 1px solid var(--line);
-    background: rgba(255,255,255,0.55);
-    border-radius: 999px;
-    color: var(--fg-2);
-    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
-    backdrop-filter: blur(8px);
+    padding: 7px 14px 6px;
+    border: 1px solid var(--ink);
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
   }
   .eyebrow .pulse {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 0 rgba(209,123,71,0.55);
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--yellow);
+    border: 1px solid var(--ink);
+    box-shadow: 0 0 0 0 rgba(244,193,43,0.55);
     animation: pulse 2.2s ease-out infinite;
   }
   @keyframes pulse {
-    0%   { box-shadow: 0 0 0 0   rgba(209,123,71,0.55); }
-    100% { box-shadow: 0 0 0 14px rgba(209,123,71,0); }
+    0%   { box-shadow: 0 0 0 0   rgba(244,193,43,0.55); }
+    100% { box-shadow: 0 0 0 12px rgba(244,193,43,0); }
   }
   h1 {
-    font-family: 'Fraunces', 'Noto Serif SC', serif;
-    font-size: clamp(64px, 12.5vw, 184px);
-    line-height: 0.92;
-    margin: 30px 0 6px;
-    font-weight: 500;
-    font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 0;
-    letter-spacing: -0.025em;
-    color: var(--fg);
+    font-family: 'Anybody', sans-serif;
+    font-size: clamp(72px, 16vw, 220px);
+    line-height: 0.88;
+    margin: 32px 0 4px;
+    font-variation-settings: "wdth" 125, "wght" 900;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--ink);
+    position: relative;
   }
   h1 .accent {
-    font-style: italic;
-    font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
-    background: linear-gradient(120deg, var(--accent) 0%, var(--accent-3) 50%, var(--accent) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--yellow);
+    -webkit-text-stroke: 2px var(--ink);
   }
   .lead {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(22px, 2.8vw, 34px);
-    color: var(--fg);
-    font-weight: 400;
+    font-family: 'Anybody', sans-serif;
+    font-weight: 500;
+    font-variation-settings: "wdth" 100, "wght" 500;
+    font-size: clamp(22px, 2.6vw, 30px);
+    color: var(--ink);
     letter-spacing: -0.01em;
-    margin: 14px 0 32px;
-    line-height: 1.25;
-    font-variation-settings: "opsz" 72, "SOFT" 50;
+    margin: 18px 0 30px;
+    line-height: 1.2;
   }
   .lead em {
-    font-style: italic; font-weight: 500;
-    background: linear-gradient(120deg, var(--accent) 0%, var(--accent-3) 50%, var(--accent) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    font-style: normal;
+    font-variation-settings: "wdth" 125, "wght" 800;
+    background: var(--yellow);
+    color: var(--ink);
+    padding: 1px 10px 0;
+    margin: 0 2px;
+    display: inline-block;
+    transform: skewX(-4deg);
   }
   .pitch {
     font-size: clamp(15px, 1.4vw, 17px);
-    color: var(--fg-2);
+    color: var(--ink-2);
     max-width: 600px;
     margin: 0 auto 40px;
     line-height: 1.78;
   }
-  .pitch strong { color: var(--fg); font-weight: 500; }
+  .pitch strong { color: var(--ink); font-weight: 600; }
+  .pitch .hl { background: var(--yellow); color: var(--ink); padding: 0 4px; font-weight: 600; }
   .cta-row { display: flex; flex-direction: column; align-items: center; gap: 12px; }
   .cta {
-    background: var(--fg);
+    background: var(--ink);
     color: var(--bg);
-    border: 0;
-    padding: 15px 28px;
-    border-radius: 999px;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px; font-weight: 500; letter-spacing: 0.04em;
+    border: 1.5px solid var(--ink);
+    padding: 14px 28px;
+    font-family: 'Anybody', sans-serif;
+    font-variation-settings: "wdth" 110, "wght" 700;
+    font-size: 13px; letter-spacing: 0.14em;
+    text-transform: uppercase;
     text-decoration: none; cursor: pointer;
-    display: inline-flex; align-items: center; gap: 10px;
-    transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
-    box-shadow: 0 6px 22px rgba(31,61,50,0.18);
+    display: inline-flex; align-items: center; gap: 12px;
+    transition: transform .25s ease, background .25s ease, color .25s ease;
   }
   .cta .arrow { display: inline-block; transition: transform .25s ease; }
   .cta:hover {
-    background: var(--accent);
+    background: var(--yellow);
+    color: var(--ink);
     transform: translateY(-1px);
-    box-shadow: 0 10px 28px rgba(209,123,71,0.25);
   }
   .cta:hover .arrow { transform: translateX(4px); }
-  .cta-note { color: var(--muted); font-size: 12px; letter-spacing: 0.08em; }
+  .cta-note {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--muted);
+    font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
   .meta-row {
-    margin-top: 60px;
-    display: flex; gap: 26px;
-    color: var(--fg-2);
-    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    margin-top: 56px;
+    display: flex; gap: 22px;
+    color: var(--ink);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.26em; text-transform: uppercase;
     flex-wrap: wrap; justify-content: center;
-    opacity: 0.85;
   }
   .meta-row span { display: inline-flex; align-items: center; gap: 8px; }
   .meta-row span::before {
-    content: ""; width: 4px; height: 4px;
-    background: var(--accent); border-radius: 50%;
+    content: ""; width: 6px; height: 6px;
+    background: var(--yellow);
+    border: 1px solid var(--ink);
+    border-radius: 50%;
   }
   footer {
-    padding: 28px 40px;
+    padding: 18px 40px;
     display: flex; justify-content: space-between; align-items: center;
-    color: var(--muted);
-    font-size: 12px; letter-spacing: 0.06em;
-    border-top: 1px solid var(--line);
+    color: var(--ink); font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    border-top: 1px solid var(--ink);
+    background: var(--bg);
+    position: relative; z-index: 3;
   }
-  footer a { color: var(--fg-2); text-decoration: none; transition: color .2s; }
-  footer a:hover { color: var(--accent); }
+  footer a {
+    color: var(--ink); text-decoration: none;
+    transition: color .2s, background .2s;
+    padding: 2px 4px;
+  }
+  footer a:hover { background: var(--yellow); }
   .fade { opacity: 0; transform: translateY(14px); animation: fade .9s ease forwards; }
   .fade.d1 { animation-delay: .15s; }
   .fade.d2 { animation-delay: .35s; }
@@ -252,37 +292,89 @@
   .fade.d5 { animation-delay: .95s; }
   .fade.d6 { animation-delay: 1.15s; }
   @keyframes fade { to { opacity: 1; transform: none; } }
-  @media (max-width: 640px) {
-    header, footer { padding: 20px; flex-direction: column; gap: 10px; align-items: flex-start; }
-    footer { align-items: center; flex-direction: row; }
-    .meta-row { gap: 18px; margin-top: 44px; }
+  @media (max-width: 720px) {
+    .dna-side { display: none; }
+    header, footer { padding: 18px 20px; }
+    .topbar, .botbar { padding: 8px 14px; font-size: 9px; letter-spacing: 0.18em; }
+    .topbar span:nth-child(2), .botbar span:nth-child(2) { display: none; }
+    .meta-row { gap: 14px; margin-top: 44px; }
     .pitch { font-size: 14.5px; }
+    .lead em { transform: none; }
   }
 </style>
 </head>
 <body>
   <div class="bg"></div>
+  <svg class="dna-side left" viewBox="0 0 80 1000" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+      <path d="M 20 0 C 20 20, 60 20, 60 60 C 60 100, 20 100, 20 120 C 20 140, 60 140, 60 180 C 60 220, 20 220, 20 240 C 20 260, 60 260, 60 300 C 60 340, 20 340, 20 360 C 20 380, 60 380, 60 420 C 60 460, 20 460, 20 480 C 20 500, 60 500, 60 540 C 60 580, 20 580, 20 600 C 20 620, 60 620, 60 660 C 60 700, 20 700, 20 720 C 20 740, 60 740, 60 780 C 60 820, 20 820, 20 840 C 20 860, 60 860, 60 900 C 60 940, 20 940, 20 960 L 20 1000"/>
+      <path d="M 60 0 C 60 20, 20 20, 20 60 C 20 100, 60 100, 60 120 C 60 140, 20 140, 20 180 C 20 220, 60 220, 60 240 C 60 260, 20 260, 20 300 C 20 340, 60 340, 60 360 C 60 380, 20 380, 20 420 C 20 460, 60 460, 60 480 C 60 500, 20 500, 20 540 C 20 580, 60 580, 60 600 C 60 620, 20 620, 20 660 C 20 700, 60 700, 60 720 C 60 740, 20 740, 20 780 C 20 820, 60 820, 60 840 C 60 860, 20 860, 20 900 C 20 940, 60 940, 60 960 L 60 1000"/>
+      <g stroke-width="1">
+        <line x1="20" y1="0"   x2="60" y2="0"/>
+        <line x1="20" y1="120" x2="60" y2="120"/>
+        <line x1="20" y1="240" x2="60" y2="240"/>
+        <line x1="20" y1="360" x2="60" y2="360"/>
+        <line x1="20" y1="480" x2="60" y2="480"/>
+        <line x1="20" y1="600" x2="60" y2="600"/>
+        <line x1="20" y1="720" x2="60" y2="720"/>
+        <line x1="20" y1="840" x2="60" y2="840"/>
+        <line x1="20" y1="960" x2="60" y2="960"/>
+      </g>
+    </g>
+  </svg>
+  <svg class="dna-side right" viewBox="0 0 80 1000" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+      <path d="M 20 0 C 20 20, 60 20, 60 60 C 60 100, 20 100, 20 120 C 20 140, 60 140, 60 180 C 60 220, 20 220, 20 240 C 20 260, 60 260, 60 300 C 60 340, 20 340, 20 360 C 20 380, 60 380, 60 420 C 60 460, 20 460, 20 480 C 20 500, 60 500, 60 540 C 60 580, 20 580, 20 600 C 20 620, 60 620, 60 660 C 60 700, 20 700, 20 720 C 20 740, 60 740, 60 780 C 60 820, 20 820, 20 840 C 20 860, 60 860, 60 900 C 60 940, 20 940, 20 960 L 20 1000"/>
+      <path d="M 60 0 C 60 20, 20 20, 20 60 C 20 100, 60 100, 60 120 C 60 140, 20 140, 20 180 C 20 220, 60 220, 60 240 C 60 260, 20 260, 20 300 C 20 340, 60 340, 60 360 C 60 380, 20 380, 20 420 C 20 460, 60 460, 60 480 C 60 500, 20 500, 20 540 C 20 580, 60 580, 60 600 C 60 620, 20 620, 20 660 C 20 700, 60 700, 60 720 C 60 740, 20 740, 20 780 C 20 820, 60 820, 60 840 C 60 860, 20 860, 20 900 C 20 940, 60 940, 60 960 L 60 1000"/>
+      <g stroke-width="1">
+        <line x1="20" y1="0"   x2="60" y2="0"/>
+        <line x1="20" y1="120" x2="60" y2="120"/>
+        <line x1="20" y1="240" x2="60" y2="240"/>
+        <line x1="20" y1="360" x2="60" y2="360"/>
+        <line x1="20" y1="480" x2="60" y2="480"/>
+        <line x1="20" y1="600" x2="60" y2="600"/>
+        <line x1="20" y1="720" x2="60" y2="720"/>
+        <line x1="20" y1="840" x2="60" y2="840"/>
+        <line x1="20" y1="960" x2="60" y2="960"/>
+      </g>
+    </g>
+  </svg>
+  <svg class="watermark" viewBox="0 0 64 64" aria-hidden="true">
+    <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M 22 14 C 22 22, 42 22, 42 32 C 42 42, 22 42, 22 50" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M 42 14 C 42 22, 22 22, 22 32 C 22 42, 42 42, 42 50" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="22" y1="14" x2="42" y2="14" stroke="currentColor" stroke-width="1"/>
+    <line x1="22" y1="32" x2="42" y2="32" stroke="currentColor" stroke-width="1"/>
+    <line x1="22" y1="50" x2="42" y2="50" stroke="currentColor" stroke-width="1"/>
+  </svg>
   <div class="halo" aria-hidden="true"></div>
-  <div class="rings" aria-hidden="true">
-    <div class="ring r1"><span class="dot"></span></div>
-    <div class="ring r2"><span class="dot"></span></div>
-    <div class="ring r3"></div>
-    <div class="ring r4"></div>
-  </div>
 
   <div class="wrap">
+    <div class="topbar">
+      <span><span class="dot"></span>ÆONCIRCLE™ · A HEALTHSPAN MEMBERSHIP</span>
+      <span>FORMING · MMXXVI</span>
+      <span>LOT N° 001</span>
+    </div>
+
     <header class="fade">
       <div class="brand">
-        <span class="brand-mark"></span>
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M 22 16 C 22 22, 42 22, 42 32 C 42 42, 22 42, 22 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 42 16 C 42 22, 22 22, 22 32 C 22 42, 42 42, 42 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="22" y1="16" x2="42" y2="16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="22" y1="32" x2="42" y2="32" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="22" y1="48" x2="42" y2="48" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
         <span>AeonCircle</span>
       </div>
-      <div class="nav-meta">The Healthspan Club · Now Forming</div>
+      <div class="nav-meta">The Healthspan Club</div>
     </header>
 
     <main>
       <div class="eyebrow fade d1">
         <span class="pulse"></span>
-        <span>Membership · Now forming</span>
+        <span>Membership N° 001 · Now Forming</span>
       </div>
 
       <h1 class="fade d2">
@@ -296,18 +388,18 @@
       <p class="pitch fade d4">
         The wealthy have private health teams.
         <strong>AeonCircle gives one to everyone else</strong> —
-        a single membership of curated regimens, personalized plans,
-        and life insurance aligned with your healthspan.
+        a single membership of <span class="hl">vetted regimens</span>,
+        personalized plans, and life insurance aligned with your healthspan.
         <br/><br/>
         You live well. We do the thinking.
       </p>
 
       <div class="cta-row fade d5">
-        <a class="cta" href="mailto:dayong.zhang@gmail.com?subject=AeonCircle%20%E2%80%94%20Invitation%20request&amp;body=Hi%20%E2%80%94%20I%27d%20like%20to%20join%20the%20founding%20circle.%0A%0AA%20little%20about%20me%3A%0A">
+        <a class="cta" href="mailto:angel.alipay2011@gmail.com?subject=AeonCircle%20%E2%80%94%20Invitation%20request&amp;body=Hi%20%E2%80%94%20I%27d%20like%20to%20join%20the%20founding%20circle.%0A%0AA%20little%20about%20me%3A%0A">
           <span class="label">Request invitation</span>
           <span class="arrow">→</span>
         </a>
-        <span class="cta-note">Founding membership opens soon</span>
+        <span class="cta-note">Founding membership · Opens soon</span>
       </div>
 
       <div class="meta-row fade d6">
@@ -318,9 +410,15 @@
       </div>
     </main>
 
+    <div class="botbar">
+      <span><span class="dot"></span>LIVE WELL · LIVE LONG</span>
+      <span>AEONCIRCLE.COM</span>
+      <span>MFG. MMXXVI</span>
+    </div>
+
     <footer class="fade d6">
-      <div>© 2026 <a href="https://aeoncircle.com/">aeoncircle.com</a></div>
-      <div><a href="mailto:dayong.zhang@gmail.com">Get in touch →</a></div>
+      <div>© 2026 AeonCircle</div>
+      <div><a href="mailto:angel.alipay2011@gmail.com">angel.alipay2011@gmail.com →</a></div>
     </footer>
   </div>
 </body>
