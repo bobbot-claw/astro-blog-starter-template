@@ -1,5 +1,5 @@
 ---
-// AeonCircle — The Healthspan Club (bio-future edition)
+// AeonCircle — The Healthspan Club
 ---
 <!doctype html>
 <html lang="en">
@@ -17,32 +17,31 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="AeonCircle — Live well, for 120 years." />
 <meta name="twitter:description" content="The wealthy have private health teams. AeonCircle gives one to everyone else." />
-<meta name="theme-color" content="#0B1311" />
+<meta name="theme-color" content="#0D1614" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,75..125,100..900;1,75..125,100..900&family=IBM+Plex+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,75..125,100..900;1,75..125,100..900&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0B1311;
-    --bg-2: #131C19;
-    --bg-3: #1A2520;
-    --ink: #ECF3EF;
-    --ink-2: #B8C5BE;
-    --muted: #6E7A74;
-    --mint: #19FFA8;
-    --mint-soft: #6FFFCF;
-    --mint-deep: #0FCC85;
-    --mint-glow: rgba(25,255,168,0.45);
-    --coral: #FF7A66;
-    --line: rgba(236,243,239,0.10);
-    --line-2: rgba(236,243,239,0.18);
+    --bg: #0D1614;
+    --bg-2: #161F1C;
+    --bg-3: #1C2724;
+    --ink: #ECEEEA;
+    --ink-2: #B5BAB6;
+    --muted: #6E7672;
+    --sage: #4ABEA0;
+    --sage-deep: #2E8C75;
+    --sage-soft: #82CDB9;
+    --line: rgba(236,238,234,0.10);
+    --line-2: rgba(236,238,234,0.18);
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   body {
     background: var(--bg);
     color: var(--ink);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Anybody', system-ui, -apple-system, sans-serif;
+    font-variation-settings: "wdth" 100, "wght" 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     min-height: 100vh;
@@ -51,16 +50,15 @@
   .bg {
     position: fixed; inset: 0; z-index: 0; overflow: hidden;
     background:
-      radial-gradient(900px 700px at 50% 60%, rgba(25,255,168,0.14), transparent 65%),
-      radial-gradient(700px 600px at 85% 10%, rgba(255,122,102,0.06), transparent 60%),
-      radial-gradient(700px 500px at 15% 90%, rgba(25,255,168,0.06), transparent 65%),
+      radial-gradient(900px 700px at 50% 60%, rgba(74,190,160,0.10), transparent 65%),
+      radial-gradient(700px 500px at 15% 90%, rgba(74,190,160,0.04), transparent 65%),
       var(--bg);
   }
   .bg::after {
     content: "";
     position: absolute; inset: -2px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    opacity: 0.6;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.55;
     pointer-events: none;
     mix-blend-mode: screen;
   }
@@ -80,36 +78,35 @@
   .topbar span, .botbar span { display: inline-flex; align-items: center; gap: 8px; }
   .topbar .dot, .botbar .dot {
     display: inline-block; width: 7px; height: 7px;
-    background: var(--mint);
+    background: var(--sage);
     border-radius: 50%;
-    box-shadow: 0 0 8px var(--mint-glow);
   }
   .halo {
     position: absolute; left: 50%; top: 50%;
     width: min(80vmin, 760px); aspect-ratio: 1/1;
     transform: translate(-50%, -50%);
     background: radial-gradient(circle,
-      rgba(25,255,168,0.22) 0%,
-      rgba(25,255,168,0.08) 35%,
-      rgba(25,255,168,0.02) 60%,
+      rgba(74,190,160,0.15) 0%,
+      rgba(74,190,160,0.05) 35%,
+      rgba(74,190,160,0.01) 60%,
       transparent 75%);
     border-radius: 50%;
     filter: blur(40px);
-    animation: breathe 8s ease-in-out infinite;
+    animation: breathe 10s ease-in-out infinite;
     pointer-events: none;
     z-index: 1;
   }
   @keyframes breathe {
-    0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.85; }
-    50%      { transform: translate(-50%, -50%) scale(1.12); opacity: 1; }
+    0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.8; }
+    50%      { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
   }
   .watermark {
     position: absolute; left: 50%; top: 50%;
     width: min(74vmin, 640px); aspect-ratio: 1/1;
     transform: translate(-50%, -50%);
     pointer-events: none; z-index: 1;
-    opacity: 0.12;
-    color: var(--mint);
+    opacity: 0.10;
+    color: var(--sage);
     animation: rotate-slow 90s linear infinite;
   }
   @keyframes rotate-slow {
@@ -120,8 +117,8 @@
     position: absolute; top: 0; bottom: 0;
     width: 80px;
     pointer-events: none; z-index: 1;
-    opacity: 0.22;
-    color: var(--mint);
+    opacity: 0.18;
+    color: var(--sage);
   }
   .dna-side.left  { left: 0; }
   .dna-side.right { right: 0; transform: scaleX(-1); }
@@ -130,7 +127,7 @@
     border-color: var(--ink-2);
     border-style: solid;
     z-index: 2;
-    opacity: 0.6;
+    opacity: 0.55;
   }
   .corner.tl { top: 52px; left: 28px;  border-width: 1px 0 0 1px; }
   .corner.tr { top: 52px; right: 28px; border-width: 1px 1px 0 0; }
@@ -150,7 +147,7 @@
     text-transform: uppercase;
     color: var(--ink);
   }
-  .logo-mark { width: 30px; height: 30px; color: var(--mint); filter: drop-shadow(0 0 6px var(--mint-glow)); }
+  .logo-mark { width: 30px; height: 30px; color: var(--sage); }
   .nav-meta {
     font-family: 'IBM Plex Mono', monospace;
     color: var(--ink-2);
@@ -160,11 +157,10 @@
   .nav-meta::before {
     content: ""; display: inline-block;
     width: 7px; height: 7px;
-    background: var(--mint);
+    background: var(--sage);
     border-radius: 50%;
     margin-right: 8px;
     vertical-align: -1px;
-    box-shadow: 0 0 8px var(--mint-glow);
   }
   main {
     flex: 1;
@@ -178,7 +174,7 @@
     display: inline-flex; align-items: center; gap: 10px;
     padding: 7px 14px 6px;
     border: 1px solid var(--line-2);
-    background: rgba(236,243,239,0.04);
+    background: rgba(236,238,234,0.03);
     color: var(--ink);
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
@@ -186,13 +182,12 @@
   }
   .eyebrow .pulse {
     width: 8px; height: 8px; border-radius: 50%;
-    background: var(--mint);
-    box-shadow: 0 0 0 0 var(--mint-glow);
-    animation: pulse 2.2s ease-out infinite;
+    background: var(--sage);
+    animation: pulse 2.6s ease-in-out infinite;
   }
   @keyframes pulse {
-    0%   { box-shadow: 0 0 0 0   var(--mint-glow), 0 0 8px var(--mint-glow); }
-    100% { box-shadow: 0 0 0 14px rgba(25,255,168,0), 0 0 8px var(--mint-glow); }
+    0%, 100% { opacity: 0.5; }
+    50%      { opacity: 1; }
   }
   h1 {
     font-family: 'Anybody', sans-serif;
@@ -205,11 +200,7 @@
     color: var(--ink);
     position: relative;
   }
-  h1 .accent {
-    display: block;
-    color: var(--mint);
-    text-shadow: 0 0 28px rgba(25,255,168,0.45);
-  }
+  h1 .accent { display: block; color: var(--sage); }
   .lead {
     font-family: 'Anybody', sans-serif;
     font-weight: 500;
@@ -221,27 +212,24 @@
     line-height: 1.25;
   }
   .lead em {
-    font-style: normal;
-    font-variation-settings: "wdth" 110, "wght" 700;
-    background: var(--coral);
-    color: #1A0E0A;
-    padding: 1px 10px 0;
-    margin: 0 2px;
-    display: inline-block;
-    transform: skewX(-4deg);
+    font-style: italic;
+    font-variation-settings: "wdth" 100, "wght" 600;
+    color: var(--ink);
   }
   .pitch {
+    font-family: 'Anybody', sans-serif;
+    font-variation-settings: "wdth" 100, "wght" 400;
     font-size: clamp(15px, 1.4vw, 17px);
     color: var(--ink-2);
-    max-width: 600px;
+    max-width: 620px;
     margin: 0 auto 14px;
-    line-height: 1.78;
+    line-height: 1.7;
   }
   .pitch strong { color: var(--ink); font-weight: 500; }
   .pitch .hl {
-    color: var(--mint);
+    color: var(--sage);
     font-weight: 500;
-    border-bottom: 1px solid var(--mint-deep);
+    border-bottom: 1px solid var(--sage-deep);
     padding-bottom: 1px;
   }
   .promise {
@@ -257,9 +245,9 @@
   }
   .cta-row { display: flex; flex-direction: column; align-items: center; gap: 12px; }
   .cta {
-    background: var(--mint);
-    color: #052216;
-    border: 1.5px solid var(--mint);
+    background: var(--sage);
+    color: #0B1311;
+    border: 1.5px solid var(--sage);
     padding: 14px 28px;
     font-family: 'Anybody', sans-serif;
     font-variation-settings: "wdth" 105, "wght" 700;
@@ -267,15 +255,13 @@
     text-transform: uppercase;
     text-decoration: none; cursor: pointer;
     display: inline-flex; align-items: center; gap: 12px;
-    transition: transform .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease;
-    box-shadow: 0 0 0 0 var(--mint-glow);
+    transition: transform .25s ease, background .25s ease, color .25s ease;
   }
   .cta .arrow { display: inline-block; transition: transform .25s ease; }
   .cta:hover {
     background: transparent;
-    color: var(--mint);
+    color: var(--sage);
     transform: translateY(-1px);
-    box-shadow: 0 0 24px var(--mint-glow);
   }
   .cta:hover .arrow { transform: translateX(4px); }
   .cta-note {
@@ -295,9 +281,8 @@
   .meta-row span { display: inline-flex; align-items: center; gap: 8px; }
   .meta-row span::before {
     content: ""; width: 6px; height: 6px;
-    background: var(--mint);
+    background: var(--sage);
     border-radius: 50%;
-    box-shadow: 0 0 6px var(--mint-glow);
   }
   footer {
     padding: 18px 40px;
@@ -309,7 +294,7 @@
     position: relative; z-index: 3;
   }
   footer a { color: var(--ink-2); text-decoration: none; transition: color .2s; padding: 2px 4px; }
-  footer a:hover { color: var(--mint); }
+  footer a:hover { color: var(--sage); }
   .fade { opacity: 0; transform: translateY(14px); animation: fade .9s ease forwards; }
   .fade.d1 { animation-delay: .15s; }
   .fade.d2 { animation-delay: .35s; }
@@ -325,13 +310,11 @@
     .topbar, .botbar { padding: 8px 14px; font-size: 9px; letter-spacing: 0.18em; }
     .meta-row { gap: 14px; margin-top: 44px; }
     .pitch { font-size: 14.5px; }
-    .lead em { transform: none; }
   }
 </style>
 </head>
 <body>
   <div class="bg"></div>
-
   <svg class="dna-side left" viewBox="0 0 80 1000" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
     <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
       <path d="M 20 0 C 20 20, 60 20, 60 60 C 60 100, 20 100, 20 120 C 20 140, 60 140, 60 180 C 60 220, 20 220, 20 240 C 20 260, 60 260, 60 300 C 60 340, 20 340, 20 360 C 20 380, 60 380, 60 420 C 60 460, 20 460, 20 480 C 20 500, 60 500, 60 540 C 60 580, 20 580, 20 600 C 20 620, 60 620, 60 660 C 60 700, 20 700, 20 720 C 20 740, 60 740, 60 780 C 60 820, 20 820, 20 840 C 20 860, 60 860, 60 900 C 60 940, 20 940, 20 960 L 20 1000"/>
@@ -366,7 +349,6 @@
       </g>
     </g>
   </svg>
-
   <svg class="watermark" viewBox="0 0 64 64" aria-hidden="true">
     <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="1.2"/>
     <path d="M 22 14 C 22 22, 42 22, 42 32 C 42 42, 22 42, 22 50" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
@@ -375,19 +357,16 @@
     <line x1="22" y1="32" x2="42" y2="32" stroke="currentColor" stroke-width="1"/>
     <line x1="22" y1="50" x2="42" y2="50" stroke="currentColor" stroke-width="1"/>
   </svg>
-
   <div class="halo" aria-hidden="true"></div>
   <div class="corner tl"></div>
   <div class="corner tr"></div>
   <div class="corner bl"></div>
   <div class="corner br"></div>
-
   <div class="wrap">
     <div class="topbar">
       <span><span class="dot"></span>ÆONCIRCLE · THE HEALTHSPAN CLUB</span>
       <span>EST. MMXXVI</span>
     </div>
-
     <header class="fade">
       <div class="brand">
         <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
@@ -402,31 +381,25 @@
       </div>
       <div class="nav-meta">The Healthspan Club</div>
     </header>
-
     <main>
       <div class="eyebrow fade d1">
         <span class="pulse"></span>
         <span>Membership · Now Forming</span>
       </div>
-
       <h1 class="fade d2">
         Aeon
         <span class="accent">Circle</span>
       </h1>
-
       <p class="lead fade d3">
         Live well — for <em>120 years</em>.
       </p>
-
       <p class="pitch fade d4">
         The wealthy have private health teams.<br/>
         AeonCircle gives one to <span class="hl">everyone else</span>.
       </p>
-
       <p class="promise fade d4">
         You live well. We do the thinking.
       </p>
-
       <div class="cta-row fade d5">
         <a class="cta" href="mailto:angel.alipay2011@gmail.com?subject=AeonCircle%20%E2%80%94%20Invitation%20request&amp;body=Hi%20%E2%80%94%20I%27d%20like%20to%20join%20the%20founding%20circle.%0A%0AA%20little%20about%20me%3A%0A">
           <span class="label">Request invitation</span>
@@ -434,7 +407,6 @@
         </a>
         <span class="cta-note">Founding membership · Opens soon</span>
       </div>
-
       <div class="meta-row fade d6">
         <span>Membership</span>
         <span>Vetted</span>
@@ -442,12 +414,10 @@
         <span>120 Years</span>
       </div>
     </main>
-
     <div class="botbar">
       <span><span class="dot"></span>LIVE WELL · LIVE LONG</span>
       <span>AEONCIRCLE.COM</span>
     </div>
-
     <footer class="fade d6">
       <div>© 2026 AeonCircle</div>
       <div><a href="mailto:angel.alipay2011@gmail.com">angel.alipay2011@gmail.com →</a></div>
