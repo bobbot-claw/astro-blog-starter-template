@@ -1,23 +1,23 @@
 ---
-// AeonCircle — 私人健康会员
+// AeonCircle — A private healthspan club
 ---
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AeonCircle — 私人健康会员</title>
-<meta name="description" content="一份私人健康团队的会员。曾经少数人才有的健康团队、严选方案、长寿保障，现在被收入一份会员。活得好，活到 120。" />
+<title>AeonCircle — A private healthspan club</title>
+<meta name="description" content="A private healthspan club. What was once a privilege of the few — a private health team, curated protocols, life insurance aligned with longevity — is now a single membership." />
 <link rel="canonical" href="https://aeoncircle.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://aeoncircle.com/" />
-<meta property="og:title" content="AeonCircle — 私人健康会员" />
-<meta property="og:description" content="活得好，活到 120。一份私人健康团队的会员。" />
+<meta property="og:title" content="AeonCircle — A private healthspan club" />
+<meta property="og:description" content="Live well. A private healthspan club. You live well. The circle does the thinking." />
 <meta property="og:site_name" content="AeonCircle" />
 <meta name="theme-color" content="#0F1411" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0F1411;
@@ -31,8 +31,8 @@
     --line: rgba(239,234,216,0.08);
     --line-2: rgba(239,234,216,0.16);
 
-    --serif: 'Noto Serif SC', 'Songti SC', Georgia, serif;
-    --sans:  'Noto Sans SC', 'PingFang SC', system-ui, -apple-system, sans-serif;
+    --serif: 'Newsreader', 'New York', Georgia, serif;
+    --sans:  'Inter', system-ui, -apple-system, sans-serif;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
@@ -63,16 +63,17 @@
     display: flex; align-items: center; gap: 12px;
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 19px;
     color: var(--ink);
     text-decoration: none;
+    letter-spacing: -0.005em;
   }
   .brand-mark { width: 26px; height: 26px; color: var(--brass); }
   .nav-links {
-    display: flex; gap: 30px;
+    display: flex; gap: 28px;
     font-family: var(--sans);
     font-size: 13px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
     color: var(--ink-2);
   }
   .nav-links a { color: var(--ink-2); text-decoration: none; transition: color .25s; }
@@ -156,8 +157,9 @@
     display: inline-flex; align-items: center; gap: 12px;
     margin-bottom: 44px;
     font-family: var(--sans);
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 0.3em;
+    text-transform: uppercase;
     color: var(--ink-2);
   }
   .eyebrow .dot {
@@ -169,11 +171,11 @@
 
   .hero h1 {
     font-family: var(--serif);
-    font-weight: 500;
-    font-size: clamp(40px, 6vw, 72px);
-    line-height: 1.1;
-    margin: 0 0 12px;
-    letter-spacing: 0.04em;
+    font-weight: 400;
+    font-size: clamp(48px, 8vw, 96px);
+    line-height: 1.02;
+    margin: 0 0 16px;
+    letter-spacing: -0.025em;
     color: var(--ink);
   }
   .hero-sub {
@@ -183,7 +185,7 @@
     color: var(--ink-2);
     margin: 0 0 8px;
     line-height: 1.7;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
   }
   .hero-brief {
     font-family: var(--sans);
@@ -192,7 +194,7 @@
     color: var(--ink-2);
     margin: 0 0 48px;
     line-height: 1.7;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
   }
   .hero-buttons {
     display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
@@ -200,12 +202,13 @@
   .btn-primary, .btn-secondary {
     font-family: var(--sans);
     font-weight: 500;
-    font-size: 13px;
-    letter-spacing: 0.16em;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
     text-decoration: none;
     padding: 14px 26px;
     border-radius: 999px;
-    display: inline-flex; align-items: center; gap: 10px;
+    display: inline-flex; align-items: center; gap: 12px;
     transition: all .3s ease;
     cursor: pointer;
   }
@@ -230,7 +233,7 @@
   .scroll-cue {
     position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
     font-family: var(--sans);
-    font-size: 11px; letter-spacing: 0.3em;
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
     color: var(--muted);
     display: flex; flex-direction: column; align-items: center; gap: 12px;
     z-index: 2;
@@ -248,23 +251,24 @@
   /* ── 共用 ────────────────────────────────────────── */
   .section-eyebrow {
     font-family: var(--sans);
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 0.3em;
+    text-transform: uppercase;
     color: var(--brass);
     margin: 0 0 18px;
   }
   .section-title {
     font-family: var(--serif);
-    font-weight: 500;
-    font-size: clamp(32px, 4.6vw, 56px);
-    line-height: 1.2;
-    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: clamp(36px, 5.2vw, 64px);
+    line-height: 1.06;
+    letter-spacing: -0.025em;
     margin: 0 0 64px;
     color: var(--ink);
   }
   .section-title .em { color: var(--brass); }
 
-  /* ── 2. 圆里有什么 ─────────────────────────────── */
+  /* ── 2. Inside the circle ─────────────────────── */
   .membership { background: var(--bg); border-top: 1px solid var(--line); }
   .membership-container { max-width: 1200px; margin: 0 auto; position: relative; }
   .cards {
@@ -282,8 +286,9 @@
   .card:hover { background: var(--bg-2); }
   .card-num {
     font-family: var(--sans);
-    font-size: 11px;
+    font-size: 10.5px;
     letter-spacing: 0.3em;
+    text-transform: uppercase;
     color: var(--brass);
     margin-bottom: 36px;
   }
@@ -297,23 +302,24 @@
   .card h3 {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 22px;
+    font-size: 25px;
     margin: 0 0 20px;
     color: var(--ink);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
   }
   .card h3 .em { color: var(--brass); }
   .card p {
     font-family: var(--sans);
     font-weight: 300;
     font-size: 14.5px;
-    line-height: 1.9;
+    line-height: 1.85;
     color: var(--ink-2);
     margin: 0;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.005em;
   }
 
-  /* ── 3. 圆的运转 ────────────────────────────────── */
+  /* ── 3. How the circle works ────────────────────── */
   .how { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .how-container {
     max-width: 1200px; margin: 0 auto;
@@ -325,10 +331,10 @@
   .how-diagram svg { width: 100%; height: auto; max-width: 460px; display: block; margin: 0 auto; }
   .how-text h2 {
     font-family: var(--serif);
-    font-weight: 500;
-    font-size: clamp(28px, 4vw, 48px);
-    line-height: 1.25;
-    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: clamp(32px, 4.4vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
     margin: 0 0 32px;
     color: var(--ink);
   }
@@ -336,16 +342,16 @@
   .how-text p {
     font-family: var(--sans);
     font-weight: 300;
-    font-size: 15.5px;
-    line-height: 1.95;
+    font-size: 16px;
+    line-height: 1.85;
     color: var(--ink-2);
     margin: 0 0 18px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.005em;
   }
   .how-text p strong { color: var(--ink); font-weight: 500; }
-  .how-text p .em { color: var(--brass); font-weight: 400; }
+  .how-text p .em { color: var(--brass); }
 
-  /* ── 4. 轨迹 ────────────────────────────────────── */
+  /* ── 4. Journey ─────────────────────────────────── */
   .journey { background: var(--bg); }
   .journey-container { max-width: 920px; margin: 0 auto; }
   .timeline {
@@ -380,25 +386,26 @@
     background: var(--bg);
     color: var(--brass);
     font-family: var(--sans);
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 0.06em;
     display: flex; align-items: center; justify-content: center;
   }
   .timeline .step-title {
     font-family: var(--serif);
-    font-weight: 500;
-    font-size: clamp(17px, 1.9vw, 22px);
+    font-weight: 400;
+    font-size: clamp(20px, 2.2vw, 26px);
     color: var(--ink);
-    letter-spacing: 0.02em;
+    letter-spacing: -0.01em;
   }
   .timeline .step-meta {
     font-family: var(--sans);
-    font-size: 11px;
+    font-size: 10.5px;
     color: var(--muted);
-    letter-spacing: 0.24em;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
   }
 
-  /* ── 5. 背书 ────────────────────────────────────── */
+  /* ── 5. Backing ─────────────────────────────────── */
   .research {
     background: var(--bg-2);
     text-align: center;
@@ -407,8 +414,9 @@
   .research-container { max-width: 1180px; margin: 0 auto; }
   .research-tag {
     font-family: var(--sans);
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 0.32em;
+    text-transform: uppercase;
     color: var(--brass);
     margin: 0 0 56px;
   }
@@ -430,15 +438,16 @@
   .logo-cell .lab-name {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 19px;
     color: var(--ink);
-    letter-spacing: 0.01em;
+    letter-spacing: -0.005em;
   }
   .logo-cell .lab-meta {
     font-family: var(--sans);
-    font-size: 11px;
+    font-size: 10.5px;
     color: var(--muted);
-    letter-spacing: 0.2em;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
   }
 
   /* ── 6. CTA ─────────────────────────────────────── */
@@ -449,13 +458,13 @@
     text-align: center;
     padding: 180px 40px 140px;
   }
-  .cta-container { max-width: 740px; margin: 0 auto; }
+  .cta-container { max-width: 760px; margin: 0 auto; }
   .cta h2 {
     font-family: var(--serif);
-    font-weight: 500;
-    font-size: clamp(34px, 5.4vw, 64px);
-    line-height: 1.2;
-    letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: clamp(40px, 6.4vw, 80px);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
     margin: 0 0 26px;
     color: var(--ink);
   }
@@ -465,8 +474,8 @@
     font-weight: 300;
     color: var(--ink-2); font-size: 15px;
     margin: 0 0 54px;
-    line-height: 1.85;
-    letter-spacing: 0.04em;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
   }
   .signup {
     display: flex; gap: 12px; max-width: 540px; margin: 0 auto;
@@ -495,8 +504,9 @@
     padding: 16px 28px;
     font-family: var(--sans);
     font-weight: 500;
-    font-size: 13px;
-    letter-spacing: 0.18em;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all .25s ease;
   }
@@ -513,11 +523,12 @@
     flex-wrap: wrap;
     gap: 18px;
     font-family: var(--sans);
-    font-size: 12px;
+    font-size: 11px;
     color: var(--muted);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
-  footer .links { display: flex; gap: 26px; }
+  footer .links { display: flex; gap: 28px; }
   footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
   footer a:hover { color: var(--brass); }
 
@@ -537,7 +548,7 @@
     .signup input, .signup button { width: 100%; border-radius: 999px; }
     .timeline li { grid-template-columns: 1fr; padding-left: 72px; }
     .timeline::before { left: 22px; }
-    .timeline li::before { width: 44px; height: 44px; font-size: 12px; }
+    .timeline li::before { width: 44px; height: 44px; font-size: 11px; }
   }
 </style>
 </head>
@@ -558,11 +569,11 @@
     <span>AeonCircle</span>
   </a>
   <div class="nav-links">
-    <a href="#membership">会员</a>
-    <a href="#how">圆的运转</a>
-    <a href="#journey">轨迹</a>
-    <a href="#research">背书</a>
-    <a href="#cta" class="join">申请邀请</a>
+    <a href="#membership">Membership</a>
+    <a href="#how">How it works</a>
+    <a href="#journey">The Journey</a>
+    <a href="#research">Backing</a>
+    <a href="#cta" class="join">Request invitation</a>
   </div>
 </nav>
 
@@ -572,48 +583,48 @@
   <div class="hero-halo" aria-hidden="true"></div>
 
   <div class="hero-content">
-    <p class="eyebrow"><span class="dot"></span><span>会员 · 筹建中</span></p>
-    <h1>活得好。</h1>
-    <p class="hero-sub">活到 120。</p>
-    <p class="hero-brief">一份私人健康团队的会员</p>
+    <p class="eyebrow"><span class="dot"></span><span>Membership · Now Forming</span></p>
+    <h1>Live well.</h1>
+    <p class="hero-sub">Live to 120.</p>
+    <p class="hero-brief">A private healthspan club.</p>
     <div class="hero-buttons">
-      <a class="btn-primary" href="#cta">申请邀请 <span class="arrow">→</span></a>
-      <a class="btn-secondary" href="#membership">走进圆</a>
+      <a class="btn-primary" href="#cta">Request invitation <span class="arrow">→</span></a>
+      <a class="btn-secondary" href="#membership">Inside the circle</a>
     </div>
   </div>
 
-  <div class="scroll-cue">向下</div>
+  <div class="scroll-cue">Scroll</div>
 </section>
 
-<!-- ═══════ 2. 圆里有什么 ═══════ -->
+<!-- ═══════ 2. Inside the circle ═══════ -->
 <section id="membership" class="membership">
   <div class="membership-container">
-    <p class="section-eyebrow reveal">— 圆中所含</p>
-    <h2 class="section-title reveal">圆里有什么。</h2>
+    <p class="section-eyebrow reveal">— What you join</p>
+    <h2 class="section-title reveal">Inside the <span class="em">circle.</span></h2>
 
     <div class="cards">
       <div class="card reveal">
         <p class="card-num">N° 01</p>
-        <h3>你的<span class="em">健康团队</span>。</h3>
-        <p>一支常驻的团队 —— 医生、长寿专家、专属顾问。他们了解你的档案、习惯、方案，替你看那些你不该再操心的事。</p>
+        <h3>Your health <span class="em">team.</span></h3>
+        <p>A standing concierge — physicians, longevity specialists, a primary advisor who know your file, your habits, your protocol. They watch the things you'd rather not have to.</p>
       </div>
 
       <div class="card reveal">
         <p class="card-num">N° 02</p>
-        <h3>经过<span class="em">严选的方案</span>。</h3>
-        <p>营养、代谢、细胞、激素 —— 每一项都先经过团队验证，再到你面前。不必再分辨研究真假、补剂优劣、潮流真伪。</p>
+        <h3>Curated <span class="em">protocols.</span></h3>
+        <p>Every regimen — nutrition, metabolic, cellular, hormonal — vetted by the team before it reaches you. No more parsing studies, supplements, or trends.</p>
       </div>
 
       <div class="card reveal">
         <p class="card-num">N° 03</p>
-        <h3>与寿命对齐的<span class="em">保障</span>。</h3>
-        <p>寿险与金融产品围绕你的健康长度设计。活得越久、越好，整个体系回报你越多 —— 它和你赌的是同一件事。</p>
+        <h3>Aligned <span class="em">protection.</span></h3>
+        <p>Life insurance and financial products designed around your healthspan. The longer you live well, the more the system pays back into your future.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════ 3. 圆的运转 ═══════ -->
+<!-- ═══════ 3. How the circle works ═══════ -->
 <section id="how" class="how">
   <div class="how-container">
     <div class="how-diagram reveal">
@@ -623,14 +634,14 @@
         <circle cx="210" cy="210" r="105" fill="none" stroke="#B5934A" stroke-opacity="0.55" stroke-width="1"/>
         <circle cx="210" cy="210" r="55"  fill="none" stroke="#B5934A" stroke-opacity="0.7"  stroke-width="1.2"/>
 
-        <text x="210" y="220" text-anchor="middle"
-              font-family="Noto Serif SC, serif"
-              font-size="26" fill="#EFEAD8" font-weight="500">你</text>
+        <text x="210" y="218" text-anchor="middle"
+              font-family="Newsreader, serif" font-style="italic"
+              font-size="22" fill="#EFEAD8" font-weight="400">you</text>
 
-        <g font-family="Noto Sans SC, sans-serif" font-size="12" letter-spacing="3" fill="#B5934A">
-          <text x="210" y="115" text-anchor="middle">团队</text>
-          <text x="210" y="65"  text-anchor="middle">方案</text>
-          <text x="210" y="20"  text-anchor="middle">保障</text>
+        <g font-family="Inter, sans-serif" font-size="9.5" letter-spacing="3" fill="#B5934A" style="text-transform: uppercase;">
+          <text x="210" y="115" text-anchor="middle">TEAM</text>
+          <text x="210" y="65"  text-anchor="middle">PROTOCOLS</text>
+          <text x="210" y="20"  text-anchor="middle">PROTECTION</text>
         </g>
 
         <g fill="#B5934A">
@@ -647,43 +658,43 @@
       </svg>
     </div>
     <div class="how-text">
-      <p class="section-eyebrow reveal">— 圆的运转</p>
-      <h2 class="reveal">围绕<span class="em">你</span>而建。</h2>
-      <p class="reveal">曾经只属于<span class="em">少数人</span>的 —— 私人健康团队、严选的方案、与长寿对齐的金融产品 —— 现在被收入一份会员。</p>
-      <p class="reveal">圆替你保持运转。<strong>你只负责活得好。</strong></p>
-      <p class="reveal">每一层 —— 团队、方案、保障 —— 都围绕同一个中心：你。</p>
+      <p class="section-eyebrow reveal">— How the circle works</p>
+      <h2 class="reveal">Built around <span class="em">you.</span></h2>
+      <p class="reveal">What was once a <span class="em">privilege of the few</span> — a private health team, curated protocols, financial products that bet on your longevity — is now a single membership.</p>
+      <p class="reveal">The circle keeps it running. <strong>You live well.</strong></p>
+      <p class="reveal">Every layer — team, protocols, protection — wraps around the same center: you.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════ 4. 轨迹 ═══════ -->
+<!-- ═══════ 4. Journey ═══════ -->
 <section id="journey" class="journey">
   <div class="journey-container">
-    <p class="section-eyebrow reveal">— 你的轨迹</p>
-    <h2 class="section-title reveal">从第一天，<br/>到一百二十年。</h2>
+    <p class="section-eyebrow reveal">— Your journey</p>
+    <h2 class="section-title reveal">From day one,<br/>to a hundred and twenty.</h2>
 
     <ol class="timeline">
-      <li class="reveal"><span class="step-title">私人入会建档</span><span class="step-meta">第 1 天</span></li>
-      <li class="reveal"><span class="step-title">围绕你的方案落地</span><span class="step-meta">第 1 周</span></li>
-      <li class="reveal"><span class="step-title">每日的轻量结构</span><span class="step-meta">每 日</span></li>
-      <li class="reveal"><span class="step-title">季度团队复盘</span><span class="step-meta">每 季</span></li>
-      <li class="reveal"><span class="step-title">年度全面校准</span><span class="step-meta">每 年</span></li>
-      <li class="reveal"><span class="step-title">一个被认真活过的世纪</span><span class="step-meta">∞</span></li>
+      <li class="reveal"><span class="step-title">Personal onboarding</span><span class="step-meta">Day 01</span></li>
+      <li class="reveal"><span class="step-title">A plan built around you</span><span class="step-meta">Week 01</span></li>
+      <li class="reveal"><span class="step-title">Daily structure, gently guided</span><span class="step-meta">Daily</span></li>
+      <li class="reveal"><span class="step-title">Quarterly review with your team</span><span class="step-meta">Quarterly</span></li>
+      <li class="reveal"><span class="step-title">Annual recalibration</span><span class="step-meta">Year on year</span></li>
+      <li class="reveal"><span class="step-title">A century, well-lived</span><span class="step-meta">∞</span></li>
     </ol>
   </div>
 </section>
 
-<!-- ═══════ 5. 背书 ═══════ -->
+<!-- ═══════ 5. Backing ═══════ -->
 <section id="research" class="research">
   <div class="research-container">
-    <p class="research-tag reveal">— 由长寿科学背书</p>
+    <p class="research-tag reveal">— Backed by longevity science</p>
     <div class="logos">
-      <div class="logo-cell reveal"><span class="lab-name">Buck Institute</span><span class="lab-meta">衰老研究</span></div>
-      <div class="logo-cell reveal"><span class="lab-name">Altos Labs</span><span class="lab-meta">细胞再生</span></div>
-      <div class="logo-cell reveal"><span class="lab-name">Calico</span><span class="lab-meta">长寿研究</span></div>
-      <div class="logo-cell reveal"><span class="lab-name">Tally Health</span><span class="lab-meta">生物标志物</span></div>
-      <div class="logo-cell reveal"><span class="lab-name">Function</span><span class="lab-meta">持续健康</span></div>
-      <div class="logo-cell reveal"><span class="lab-name">Levels</span><span class="lab-meta">代谢健康</span></div>
+      <div class="logo-cell reveal"><span class="lab-name">Buck Institute</span><span class="lab-meta">Aging Research</span></div>
+      <div class="logo-cell reveal"><span class="lab-name">Altos Labs</span><span class="lab-meta">Cell Rejuvenation</span></div>
+      <div class="logo-cell reveal"><span class="lab-name">Calico</span><span class="lab-meta">Longevity</span></div>
+      <div class="logo-cell reveal"><span class="lab-name">Tally Health</span><span class="lab-meta">Biomarker Science</span></div>
+      <div class="logo-cell reveal"><span class="lab-name">Function</span><span class="lab-meta">Continuous Health</span></div>
+      <div class="logo-cell reveal"><span class="lab-name">Levels</span><span class="lab-meta">Metabolic Health</span></div>
     </div>
   </div>
 </section>
@@ -691,22 +702,22 @@
 <!-- ═══════ 6. CTA ═══════ -->
 <section id="cta" class="cta">
   <div class="cta-container">
-    <h2 class="reveal">你的<span class="em">圆</span>，<br/>正在成形。</h2>
-    <p class="cta-sub reveal">创始会员将于 2026 开放。<br/>留下邮箱，门打开时我们会发出一份私人邀请。</p>
-    <form class="signup reveal" onsubmit="event.preventDefault(); window.location='mailto:angel.alipay2011@gmail.com?subject=AeonCircle%20%E2%80%94%20%E7%94%B3%E8%AF%B7%E9%82%80%E8%AF%B7&body='+encodeURIComponent('我的邮箱：' + this.elements.email.value);">
+    <h2 class="reveal">Your <span class="em">circle</span><br/>is forming.</h2>
+    <p class="cta-sub reveal">Founding membership opens 2026. Leave an email — when the doors are ready, we&rsquo;ll send you a private invitation.</p>
+    <form class="signup reveal" onsubmit="event.preventDefault(); window.location='mailto:angel.alipay2011@gmail.com?subject=AeonCircle%20%E2%80%94%20Invitation%20request&body='+encodeURIComponent('My email: ' + this.elements.email.value);">
       <input type="email" name="email" placeholder="your@email.com" required />
-      <button type="submit">申请邀请</button>
+      <button type="submit">Request invitation</button>
     </form>
   </div>
 </section>
 
 <footer>
-  <div>© 2026 AeonCircle · 私人健康会员</div>
+  <div>© 2026 AeonCircle · The Healthspan Club</div>
   <div class="links">
-    <a href="#">隐私</a>
-    <a href="#">科学</a>
-    <a href="#">生物安全</a>
-    <a href="mailto:angel.alipay2011@gmail.com">联系</a>
+    <a href="#">Privacy</a>
+    <a href="#">Science</a>
+    <a href="#">Biosafety</a>
+    <a href="mailto:angel.alipay2011@gmail.com">Contact</a>
   </div>
 </footer>
 
