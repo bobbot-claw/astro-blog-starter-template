@@ -677,10 +677,43 @@
   .footer-row a { color: var(--muted); text-decoration: none; transition: color .25s; }
   .footer-row a:hover { color: var(--brass); }
 
+  /* ── BGM toggle ─────────────────────────────────── */
+  .bgm-toggle {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    z-index: 50;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(15,20,17,0.65);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid var(--line-2);
+    color: var(--ink-3);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all .35s ease;
+    padding: 0;
+  }
+  .bgm-toggle:hover {
+    border-color: var(--brass);
+    color: var(--brass-bright);
+    transform: translateY(-1px);
+  }
+  .bgm-toggle.on {
+    color: var(--brass-bright);
+    border-color: var(--brass);
+  }
+  .bgm-toggle svg { width: 20px; height: 20px; }
+  .bgm-toggle .waves { opacity: 0; transition: opacity .4s ease; }
+  .bgm-toggle.on .waves { opacity: 1; }
+
   /* ── Reveal ────────────────────────────────────── */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1.2s ease, transform 1.2s ease; }
   .reveal.in { opacity: 1; transform: none; }
 
+  @media (max-width: 640px) {
+    .bgm-toggle { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+  }
   @media (max-width: 900px) {
     nav { padding: 14px 22px; }
     .nav-links { gap: 16px; }
@@ -1059,6 +1092,17 @@
   </div>
 </section>
 
+<button class="bgm-toggle" id="bgm-toggle" type="button" aria-label="Toggle background music">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 11 5 L 6 9 H 3 V 15 H 6 L 11 19 V 5 Z"/>
+    <g class="waves">
+      <path d="M 14 9 Q 16 12 14 15"/>
+      <path d="M 16 6 Q 20 12 16 18"/>
+    </g>
+  </svg>
+</button>
+<audio id="bgm" src="/audio/bgm.mp3" loop preload="metadata" aria-hidden="true"></audio>
+
 <footer>
   <p class="footer-motto">
     <span class="en">The long life, well-lived.</span>
@@ -1102,6 +1146,31 @@
   if (document.documentElement.classList.contains('lang-zh')) {
     document.title = TITLES.zh;
   }
+
+  // ── BGM toggle ──
+  (function(){
+    const audio = document.getElementById('bgm');
+    const btn = document.getElementById('bgm-toggle');
+    if (!audio || !btn) return;
+    audio.volume = 0.4;
+
+    function setOn(on) {
+      btn.classList.toggle('on', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      try { localStorage.setItem('aeoncircle-bgm', on ? 'on' : 'off'); } catch(e) {}
+    }
+
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play().then(() => setOn(true)).catch(() => {});
+      } else {
+        audio.pause();
+        setOn(false);
+      }
+    });
+
+    audio.addEventListener('ended', () => setOn(false));
+  })();
 </script>
 
 </body>
