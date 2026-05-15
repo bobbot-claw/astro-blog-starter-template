@@ -624,7 +624,7 @@
     <a href="#journey"><span class="en">The Journey</span><span class="zh">軌跡</span></a>
     <a href="#research"><span class="en">Backing</span><span class="zh">背書</span></a>
     <a href="#cta" class="join"><span class="en">Request invitation</span><span class="zh">申請邀請</span></a>
-    <button class="lang-toggle" onclick="toggleLang()">
+    <button class="lang-toggle" id="lang-toggle" type="button">
       <span class="en">中</span>
       <span class="zh">EN</span>
     </button>
@@ -991,12 +991,14 @@
     document.title = isZh ? TITLES.en : TITLES.zh;
     try { localStorage.setItem('aeoncircle-lang', isZh ? 'en' : 'zh'); } catch(e) {}
   }
+  // Bind to window so inline handlers still work
+  window.toggleLang = toggleLang;
+  // Bind via addEventListener (the robust path — module scripts otherwise lose globals)
+  document.getElementById('lang-toggle')?.addEventListener('click', toggleLang);
   // Sync title on first load if saved was zh
-  (function(){
-    if (document.documentElement.classList.contains('lang-zh')) {
-      document.title = TITLES.zh;
-    }
-  })();
+  if (document.documentElement.classList.contains('lang-zh')) {
+    document.title = TITLES.zh;
+  }
 </script>
 
 </body>
