@@ -7,17 +7,17 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AeonCircle — A private healthspan club</title>
-<meta name="description" content="A private healthspan club for 120 well-lived years. Private health team. Global access. Curated protocols. Health and life insurance stacked — the circle is paid to be right about you." />
+<meta name="description" content="A private healthspan club for 120 well-lived years. Standing health team, global access, curated protocols, stacked health and life insurance. The circle is paid to be right about you." />
 <link rel="canonical" href="https://aeoncircle.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://aeoncircle.com/" />
 <meta property="og:title" content="AeonCircle — A private healthspan club" />
-<meta property="og:description" content="For 120 well-lived years. Private health team, global access, curated protocols, stacked health + life insurance." />
+<meta property="og:description" content="The long life, well-lived. A private healthspan club for a hundred and twenty well-lived years." />
 <meta property="og:site_name" content="AeonCircle" />
 <meta name="theme-color" content="#0F1411" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300;400;500;600&family=Noto+Serif+TC:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
 <script>
   (function(){
     try {
@@ -40,11 +40,13 @@
     --bg-3: #1D231F;
     --ink: #EFEAD8;
     --ink-2: #B8B29C;
+    --ink-3: #908A78;
     --muted: #80796A;
     --brass: #B5934A;
+    --brass-bright: #D7B776;
     --brass-faint: rgba(181,147,74,0.12);
-    --line: rgba(239,234,216,0.08);
-    --line-2: rgba(239,234,216,0.16);
+    --line: rgba(239,234,216,0.07);
+    --line-2: rgba(239,234,216,0.15);
 
     --serif: 'Newsreader', 'Noto Serif TC', 'PingFang TC', Georgia, serif;
     --sans:  'Inter', 'Noto Sans TC', 'PingFang TC', system-ui, -apple-system, sans-serif;
@@ -66,18 +68,19 @@
   html.lang-en .zh,
   html.lang-zh .en { display: none; }
 
+  /* ── Nav ─────────────────────────────────────────── */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
-    padding: 20px 40px;
+    padding: 22px 44px;
     display: flex; justify-content: space-between; align-items: center;
-    background: rgba(15,20,17,0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(15,20,17,0.62);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
     border-bottom: 1px solid var(--line);
   }
   .brand {
-    display: flex; align-items: center; gap: 12px;
+    display: flex; align-items: center; gap: 13px;
     font-family: var(--serif);
     font-weight: 500;
     font-size: 19px;
@@ -85,71 +88,74 @@
     text-decoration: none;
     letter-spacing: -0.005em;
   }
+  html.lang-zh .brand { font-weight: 500; font-size: 20px; letter-spacing: 0.04em; }
   .brand-mark { width: 26px; height: 26px; color: var(--brass); }
   .nav-links {
-    display: flex; gap: 26px; align-items: center;
+    display: flex; gap: 30px; align-items: center;
     font-family: var(--sans);
     font-size: 13px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.015em;
     color: var(--ink-2);
   }
   .nav-links a, .nav-links button {
     color: var(--ink-2); text-decoration: none;
-    transition: color .25s;
+    transition: color .3s ease;
     background: transparent; border: none; padding: 0;
     font: inherit; cursor: pointer; letter-spacing: inherit;
   }
-  .nav-links a:hover, .nav-links button:hover { color: var(--brass); }
+  .nav-links a:hover, .nav-links button:hover { color: var(--brass-bright); }
   .nav-links a.join {
     color: var(--ink);
-    padding: 5px 14px;
+    padding: 6px 16px;
     border: 1px solid var(--line-2);
     border-radius: 999px;
+    transition: all .3s ease;
   }
-  .nav-links a.join:hover { border-color: var(--brass); color: var(--brass); }
+  .nav-links a.join:hover { border-color: var(--brass); color: var(--brass-bright); background: rgba(181,147,74,0.08); }
   .lang-toggle {
-    padding: 5px 0 5px 4px !important;
+    padding: 6px 0 6px 4px !important;
     border-left: 1px solid var(--line);
     margin-left: 4px;
-    padding-left: 18px !important;
+    padding-left: 20px !important;
     color: var(--muted) !important;
     font-size: 12px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
   }
-  .lang-toggle:hover { color: var(--brass) !important; }
+  .lang-toggle:hover { color: var(--brass-bright) !important; }
 
   section {
     position: relative;
-    padding: 140px 40px;
+    padding: 150px 44px;
     overflow: hidden;
   }
 
+  /* ── Hero ──────────────────────────────────────── */
   .hero {
     min-height: 100vh;
-    padding: 160px 40px 96px;
+    padding: 180px 44px 110px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     text-align: center;
     background:
-      radial-gradient(1100px 700px at 50% 40%, rgba(181,147,74,0.08), transparent 65%),
-      radial-gradient(600px 500px at 18% 92%, rgba(181,147,74,0.04), transparent 65%),
+      radial-gradient(1200px 800px at 50% 38%, rgba(181,147,74,0.09), transparent 65%),
+      radial-gradient(700px 600px at 18% 92%, rgba(181,147,74,0.04), transparent 65%),
       var(--bg);
   }
   .grain {
     position: fixed; inset: 0; z-index: 0;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.035 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-    opacity: 0.55;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.03 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.6;
     pointer-events: none;
     mix-blend-mode: overlay;
   }
   .hero-ring {
     position: absolute; left: 50%; top: 50%;
-    width: min(86vmin, 800px); aspect-ratio: 1/1;
+    width: min(86vmin, 820px); aspect-ratio: 1/1;
     transform: translate(-50%, -50%);
     border: 1px solid var(--brass-faint);
     border-radius: 50%;
     pointer-events: none;
-    animation: spin 120s linear infinite;
+    animation: spin 160s linear infinite;
   }
   .hero-ring::before {
     content: ""; position: absolute; inset: 9%;
@@ -169,67 +175,94 @@
   }
   .hero-halo {
     position: absolute; left: 50%; top: 50%;
-    width: min(60vmin, 520px); aspect-ratio: 1/1;
+    width: min(60vmin, 540px); aspect-ratio: 1/1;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(181,147,74,0.20) 0%, rgba(181,147,74,0.06) 35%, transparent 70%);
+    background: radial-gradient(circle, rgba(181,147,74,0.20) 0%, rgba(181,147,74,0.05) 38%, transparent 70%);
     border-radius: 50%;
-    filter: blur(40px);
-    animation: breathe 11s ease-in-out infinite;
+    filter: blur(50px);
+    animation: breathe 14s ease-in-out infinite;
     pointer-events: none;
   }
   @keyframes breathe {
-    0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.85; }
+    0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.82; }
     50%      { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
   }
 
-  .hero-content { position: relative; z-index: 2; max-width: 720px; }
+  .hero-content { position: relative; z-index: 2; max-width: 760px; }
 
   .eyebrow {
-    display: inline-flex; align-items: center; gap: 12px;
-    margin-bottom: 44px;
+    display: inline-flex; align-items: center; gap: 14px;
+    margin-bottom: 56px;
     font-family: var(--sans);
     font-size: 11px;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.32em;
     color: var(--ink-2);
   }
   html.lang-en .eyebrow { text-transform: uppercase; }
+  html.lang-zh .eyebrow { font-size: 12px; letter-spacing: 0.2em; }
   .eyebrow .dot {
     width: 6px; height: 6px; border-radius: 50%;
     background: var(--brass);
-    animation: blink 3s ease-in-out infinite;
+    animation: blink 3.6s ease-in-out infinite;
   }
   @keyframes blink { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
 
-  .hero h1 {
+  /* The motto — independent poetic line, brand sign */
+  .motto {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(48px, 8vw, 96px);
-    line-height: 1.02;
-    margin: 0 0 16px;
-    letter-spacing: -0.025em;
+    font-style: italic;
+    color: var(--brass-bright);
+    margin: 0 0 22px;
+    letter-spacing: 0.04em;
+  }
+  html.lang-en .motto {
+    font-size: clamp(16px, 1.6vw, 19px);
+    font-variation-settings: "opsz" 30, "wght" 400;
+  }
+  html.lang-zh .motto {
+    font-style: normal;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(16px, 1.8vw, 22px);
+    letter-spacing: 0.4em;
+    padding-left: 0.4em;  /* compensate for tracking */
+    color: var(--brass-bright);
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(56px, 9vw, 116px);
+    line-height: 1.0;
+    margin: 0 0 24px;
+    letter-spacing: -0.028em;
     color: var(--ink);
   }
-  html.lang-zh .hero h1 { font-weight: 500; letter-spacing: 0.02em; line-height: 1.1; }
+  html.lang-zh .hero h1 {
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    line-height: 1.12;
+    font-size: clamp(48px, 7.8vw, 104px);
+  }
   .hero-sub {
-    font-family: var(--sans);
-    font-weight: 300;
-    font-size: clamp(14px, 1.4vw, 17px);
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 350;
+    font-size: clamp(18px, 2vw, 24px);
     color: var(--ink-2);
-    margin: 0 0 8px;
-    line-height: 1.7;
-    letter-spacing: 0.04em;
+    margin: 0 0 56px;
+    line-height: 1.45;
+    letter-spacing: -0.005em;
   }
-  html.lang-zh .hero-sub { letter-spacing: 0.08em; }
-  .hero-brief {
-    font-family: var(--sans);
-    font-weight: 300;
-    font-size: clamp(14px, 1.4vw, 17px);
+  html.lang-zh .hero-sub {
+    font-style: normal;
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(16px, 1.8vw, 21px);
+    letter-spacing: 0.1em;
     color: var(--ink-2);
-    margin: 0 0 48px;
-    line-height: 1.7;
-    letter-spacing: 0.04em;
   }
-  html.lang-zh .hero-brief { letter-spacing: 0.08em; }
   .hero-buttons {
     display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
   }
@@ -237,17 +270,17 @@
     font-family: var(--sans);
     font-weight: 500;
     font-size: 11px;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.3em;
     text-decoration: none;
-    padding: 14px 26px;
+    padding: 15px 28px;
     border-radius: 999px;
     display: inline-flex; align-items: center; gap: 12px;
-    transition: all .3s ease;
+    transition: all .35s ease;
     cursor: pointer;
   }
   html.lang-en .btn-primary, html.lang-en .btn-secondary { text-transform: uppercase; }
   html.lang-zh .btn-primary, html.lang-zh .btn-secondary {
-    font-size: 13px; letter-spacing: 0.18em;
+    font-size: 13px; letter-spacing: 0.22em; font-weight: 500;
   }
   .btn-primary {
     background: var(--ink);
@@ -258,56 +291,67 @@
     background: var(--brass); color: var(--bg); border-color: var(--brass);
     transform: translateY(-1px);
   }
-  .btn-primary .arrow { transition: transform .3s ease; }
-  .btn-primary:hover .arrow { transform: translateX(5px); }
+  .btn-primary .arrow { transition: transform .35s ease; }
+  .btn-primary:hover .arrow { transform: translateX(6px); }
   .btn-secondary {
     background: transparent;
     color: var(--ink);
     border: 1px solid var(--line-2);
   }
-  .btn-secondary:hover { border-color: var(--brass); color: var(--brass); }
+  .btn-secondary:hover { border-color: var(--brass); color: var(--brass-bright); }
 
   .scroll-cue {
     position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
     font-family: var(--sans);
-    font-size: 10px; letter-spacing: 0.3em;
+    font-size: 10px; letter-spacing: 0.34em;
     color: var(--muted);
-    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
     z-index: 2;
   }
   html.lang-en .scroll-cue { text-transform: uppercase; }
   .scroll-cue::after {
-    content: ""; width: 1px; height: 36px;
+    content: ""; width: 1px; height: 38px;
     background: linear-gradient(180deg, var(--brass) 0%, transparent 100%);
-    animation: cueDrop 2s ease-in-out infinite;
+    animation: cueDrop 2.4s ease-in-out infinite;
   }
   @keyframes cueDrop {
-    0%, 100% { opacity: 0.25; height: 28px; }
-    50%      { opacity: 1; height: 44px; }
+    0%, 100% { opacity: 0.2; height: 28px; }
+    50%      { opacity: 1; height: 48px; }
   }
 
+  /* ── Shared ─────────────────────────────────────── */
   .section-eyebrow {
     font-family: var(--sans);
     font-size: 11px;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.32em;
     color: var(--brass);
-    margin: 0 0 18px;
+    margin: 0 0 20px;
   }
   html.lang-en .section-eyebrow { text-transform: uppercase; }
+  html.lang-zh .section-eyebrow { font-size: 12px; letter-spacing: 0.22em; }
   .section-title {
     font-family: var(--serif);
-    font-weight: 400;
-    font-size: clamp(36px, 5.2vw, 64px);
+    font-weight: 350;
+    font-size: clamp(38px, 5.4vw, 68px);
     line-height: 1.06;
     letter-spacing: -0.025em;
-    margin: 0 0 64px;
+    margin: 0 0 72px;
     color: var(--ink);
   }
-  html.lang-zh .section-title { font-weight: 500; letter-spacing: 0.02em; line-height: 1.2; }
+  html.lang-zh .section-title {
+    font-weight: 500; letter-spacing: 0.025em; line-height: 1.2;
+    font-size: clamp(34px, 4.8vw, 58px);
+  }
   .section-title .em { color: var(--brass); }
+  .section-title .qm { /* quote-mark italic for English */
+    font-style: italic;
+    color: var(--brass);
+  }
+  html.lang-zh .section-title .qm { font-style: normal; color: var(--brass); }
 
+  /* ── Cards ──────────────────────────────────────── */
   .membership { background: var(--bg); border-top: 1px solid var(--line); }
-  .membership-container { max-width: 1200px; margin: 0 auto; position: relative; }
+  .membership-container { max-width: 1240px; margin: 0 auto; position: relative; }
   .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -317,81 +361,98 @@
   }
   .card {
     background: var(--bg);
-    padding: 56px 40px;
-    transition: background .35s ease;
+    padding: 64px 44px;
+    transition: background .4s ease;
   }
   .card:hover { background: var(--bg-2); }
   .card-num {
     font-family: var(--sans);
     font-size: 10.5px;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.32em;
     color: var(--brass);
-    margin-bottom: 36px;
+    margin-bottom: 40px;
+    display: flex; align-items: center; gap: 14px;
   }
   .card-num::before {
     content: ""; display: inline-block;
-    width: 28px; height: 1px;
+    width: 30px; height: 1px;
     background: var(--brass);
-    margin-right: 12px;
-    vertical-align: 3px;
   }
   .card h3 {
     font-family: var(--serif);
     font-weight: 500;
-    font-size: 25px;
-    margin: 0 0 20px;
+    font-size: 26px;
+    margin: 0 0 22px;
     color: var(--ink);
-    letter-spacing: -0.01em;
-    line-height: 1.25;
+    letter-spacing: -0.012em;
+    line-height: 1.22;
   }
-  html.lang-zh .card h3 { letter-spacing: 0.02em; line-height: 1.4; }
+  html.lang-zh .card h3 {
+    letter-spacing: 0.02em; line-height: 1.4;
+    font-size: 24px; font-weight: 500;
+  }
   .card h3 .em { color: var(--brass); }
   .card p {
     font-family: var(--sans);
     font-weight: 300;
-    font-size: 14.5px;
-    line-height: 1.85;
+    font-size: 15px;
+    line-height: 1.9;
     color: var(--ink-2);
     margin: 0;
     letter-spacing: 0.005em;
   }
-  html.lang-zh .card p { letter-spacing: 0.02em; line-height: 1.95; }
-
-  .how { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .how-container {
-    max-width: 1200px; margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 96px;
-    align-items: center;
-  }
-  .how-diagram svg { width: 100%; height: auto; max-width: 460px; display: block; margin: 0 auto; }
-  .how-text h2 {
+  html.lang-zh .card p {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(32px, 4.4vw, 56px);
+    letter-spacing: 0.02em;
+    line-height: 2.0;
+  }
+
+  /* ── How ────────────────────────────────────────── */
+  .how { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .how-container {
+    max-width: 1240px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+  }
+  .how-diagram svg { width: 100%; height: auto; max-width: 480px; display: block; margin: 0 auto; }
+  .how-text h2 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(34px, 4.6vw, 58px);
     line-height: 1.1;
     letter-spacing: -0.025em;
-    margin: 0 0 32px;
+    margin: 0 0 36px;
     color: var(--ink);
   }
-  html.lang-zh .how-text h2 { font-weight: 500; letter-spacing: 0.02em; line-height: 1.25; }
+  html.lang-zh .how-text h2 {
+    font-weight: 500; letter-spacing: 0.025em; line-height: 1.25;
+    font-size: clamp(30px, 4vw, 50px);
+  }
   .how-text h2 .em { color: var(--brass); }
   .how-text p {
     font-family: var(--sans);
     font-weight: 300;
     font-size: 16px;
-    line-height: 1.85;
+    line-height: 1.9;
     color: var(--ink-2);
-    margin: 0 0 18px;
+    margin: 0 0 20px;
     letter-spacing: 0.005em;
   }
-  html.lang-zh .how-text p { letter-spacing: 0.02em; line-height: 2; }
+  html.lang-zh .how-text p {
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    line-height: 2.1;
+  }
   .how-text p strong { color: var(--ink); font-weight: 500; }
   .how-text p .em { color: var(--brass); }
 
+  /* ── Journey ────────────────────────────────────── */
   .journey { background: var(--bg); }
-  .journey-container { max-width: 920px; margin: 0 auto; }
+  .journey-container { max-width: 940px; margin: 0 auto; }
   .timeline {
     list-style: none; padding: 0; margin: 0;
     position: relative;
@@ -399,17 +460,17 @@
   }
   .timeline::before {
     content: ""; position: absolute;
-    left: 27px; top: 14px; bottom: 14px;
+    left: 30px; top: 16px; bottom: 16px;
     width: 1px;
     background: linear-gradient(180deg, var(--brass) 0%, rgba(181,147,74,0.2) 60%, transparent 100%);
   }
   .timeline li {
     counter-increment: step;
     position: relative;
-    padding: 28px 0 28px 84px;
+    padding: 30px 0 30px 90px;
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 24px;
+    gap: 26px;
     align-items: baseline;
     border-bottom: 1px solid var(--line);
   }
@@ -417,15 +478,15 @@
   .timeline li::before {
     content: counter(step, decimal-leading-zero);
     position: absolute;
-    left: 0; top: 28px;
-    width: 54px; height: 54px;
+    left: 0; top: 30px;
+    width: 58px; height: 58px;
     border: 1px solid var(--brass);
     border-radius: 50%;
     background: var(--bg);
     color: var(--brass);
     font-family: var(--sans);
     font-size: 12px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     display: flex; align-items: center; justify-content: center;
   }
   .timeline .step-title {
@@ -433,31 +494,40 @@
     font-weight: 400;
     font-size: clamp(20px, 2.2vw, 26px);
     color: var(--ink);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.012em;
   }
-  html.lang-zh .timeline .step-title { font-weight: 500; letter-spacing: 0.02em; }
+  html.lang-zh .timeline .step-title {
+    font-weight: 500; letter-spacing: 0.025em;
+  }
   .timeline .step-meta {
     font-family: var(--sans);
     font-size: 10.5px;
     color: var(--muted);
-    letter-spacing: 0.26em;
+    letter-spacing: 0.3em;
   }
   html.lang-en .timeline .step-meta { text-transform: uppercase; }
 
+  /* ── Backing ────────────────────────────────────── */
   .research {
     background: var(--bg-2);
     text-align: center;
     border-top: 1px solid var(--line);
   }
-  .research-container { max-width: 1180px; margin: 0 auto; }
+  .research-container { max-width: 1200px; margin: 0 auto; }
   .research-tag {
-    font-family: var(--sans);
-    font-size: 11px;
-    letter-spacing: 0.32em;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(14px, 1.4vw, 18px);
+    letter-spacing: 0.05em;
     color: var(--brass);
-    margin: 0 0 56px;
+    margin: 0 0 64px;
   }
-  html.lang-en .research-tag { text-transform: uppercase; }
+  html.lang-zh .research-tag {
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(15px, 1.6vw, 20px);
+    letter-spacing: 0.2em;
+  }
   .logos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -467,9 +537,9 @@
   }
   .logo-cell {
     background: var(--bg-2);
-    padding: 40px 18px;
+    padding: 44px 20px;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 8px;
+    gap: 9px;
     transition: background .3s ease;
   }
   .logo-cell:hover { background: var(--bg-3); }
@@ -488,36 +558,48 @@
   }
   html.lang-en .logo-cell .lab-meta { text-transform: uppercase; }
 
+  /* ── CTA ────────────────────────────────────────── */
   .cta {
     background:
       radial-gradient(900px 600px at 50% 50%, rgba(181,147,74,0.10), transparent 65%),
       var(--bg);
     text-align: center;
-    padding: 180px 40px 140px;
+    padding: 200px 44px 160px;
   }
-  .cta-container { max-width: 760px; margin: 0 auto; }
+  .cta-container { max-width: 780px; margin: 0 auto; }
   .cta h2 {
     font-family: var(--serif);
-    font-weight: 400;
-    font-size: clamp(40px, 6.4vw, 80px);
+    font-weight: 350;
+    font-size: clamp(44px, 6.8vw, 88px);
     line-height: 1.02;
-    letter-spacing: -0.03em;
-    margin: 0 0 26px;
+    letter-spacing: -0.032em;
+    margin: 0 0 30px;
     color: var(--ink);
   }
-  html.lang-zh .cta h2 { font-weight: 500; letter-spacing: 0.02em; line-height: 1.2; }
+  html.lang-zh .cta h2 {
+    font-weight: 500; letter-spacing: 0.025em; line-height: 1.2;
+    font-size: clamp(38px, 5.6vw, 72px);
+  }
   .cta h2 .em { color: var(--brass); }
   .cta-sub {
-    font-family: var(--sans);
-    font-weight: 300;
-    color: var(--ink-2); font-size: 15px;
-    margin: 0 0 54px;
-    line-height: 1.8;
-    letter-spacing: 0.02em;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 350;
+    color: var(--ink-2); font-size: 17px;
+    margin: 0 0 60px;
+    line-height: 1.75;
+    letter-spacing: 0.005em;
   }
-  html.lang-zh .cta-sub { letter-spacing: 0.05em; }
+  html.lang-zh .cta-sub {
+    font-style: normal;
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    line-height: 1.95;
+  }
   .signup {
-    display: flex; gap: 12px; max-width: 540px; margin: 0 auto;
+    display: flex; gap: 12px; max-width: 560px; margin: 0 auto;
     flex-wrap: wrap;
   }
   .signup input {
@@ -525,13 +607,13 @@
     background: transparent;
     border: 1px solid var(--line-2);
     border-radius: 999px;
-    padding: 16px 22px;
+    padding: 17px 24px;
     color: var(--ink);
     font-family: var(--sans);
     font-size: 14px;
     letter-spacing: 0.02em;
     outline: none;
-    transition: border-color .2s ease;
+    transition: border-color .3s ease;
   }
   .signup input::placeholder { color: var(--muted); }
   .signup input:focus { border-color: var(--brass); }
@@ -540,24 +622,47 @@
     color: var(--bg);
     border: 1px solid var(--ink);
     border-radius: 999px;
-    padding: 16px 28px;
+    padding: 17px 32px;
     font-family: var(--sans);
     font-weight: 500;
     font-size: 11px;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.3em;
     cursor: pointer;
-    transition: all .25s ease;
+    transition: all .3s ease;
   }
   html.lang-en .signup button { text-transform: uppercase; }
-  html.lang-zh .signup button { font-size: 13px; letter-spacing: 0.18em; }
+  html.lang-zh .signup button { font-size: 13px; letter-spacing: 0.22em; }
   .signup button:hover {
     background: var(--brass); color: var(--bg); border-color: var(--brass);
   }
 
+  /* ── Footer ──────────────────────────────────────── */
   footer {
     background: var(--bg);
-    padding: 36px 40px;
+    padding: 36px 44px 28px;
     border-top: 1px solid var(--line);
+    position: relative; z-index: 3;
+  }
+  .footer-motto {
+    text-align: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--brass);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    margin: 0 0 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  html.lang-zh .footer-motto {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5em;
+    padding-left: 0.5em;
+  }
+  .footer-row {
     display: flex; justify-content: space-between; align-items: center;
     flex-wrap: wrap;
     gap: 18px;
@@ -566,28 +671,31 @@
     color: var(--muted);
     letter-spacing: 0.14em;
   }
-  html.lang-en footer { text-transform: uppercase; }
-  footer .links { display: flex; gap: 28px; }
-  footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
-  footer a:hover { color: var(--brass); }
+  html.lang-en .footer-row { text-transform: uppercase; }
+  html.lang-zh .footer-row { font-size: 12px; letter-spacing: 0.1em; }
+  .footer-row .links { display: flex; gap: 28px; }
+  .footer-row a { color: var(--muted); text-decoration: none; transition: color .25s; }
+  .footer-row a:hover { color: var(--brass); }
 
-  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
+  /* ── Reveal ────────────────────────────────────── */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1.2s ease, transform 1.2s ease; }
   .reveal.in { opacity: 1; transform: none; }
 
   @media (max-width: 900px) {
-    nav { padding: 14px 20px; }
+    nav { padding: 14px 22px; }
     .nav-links { gap: 16px; }
     .nav-links a:not(.join):not(.lang-toggle) { display: none; }
-    section { padding: 96px 22px; }
-    .hero { padding: 130px 22px 80px; }
+    section { padding: 100px 22px; }
+    .hero { padding: 140px 22px 96px; }
     .cards { grid-template-columns: 1fr; }
-    .card { padding: 44px 28px; }
-    .how-container { grid-template-columns: 1fr; gap: 56px; }
+    .card { padding: 48px 30px; }
+    .how-container { grid-template-columns: 1fr; gap: 64px; }
     .signup { flex-direction: column; }
     .signup input, .signup button { width: 100%; border-radius: 999px; }
-    .timeline li { grid-template-columns: 1fr; padding-left: 72px; }
-    .timeline::before { left: 22px; }
-    .timeline li::before { width: 44px; height: 44px; font-size: 11px; }
+    .timeline li { grid-template-columns: 1fr; padding-left: 76px; gap: 8px; }
+    .timeline::before { left: 24px; }
+    .timeline li::before { width: 48px; height: 48px; font-size: 11px; }
+    .footer-motto { font-size: 12px; letter-spacing: 0.04em; }
   }
 </style>
 </head>
@@ -621,6 +729,7 @@
   </div>
 </nav>
 
+<!-- ═══════ Hero ═══════ -->
 <section id="hero" class="hero">
   <div class="hero-ring" aria-hidden="true"></div>
   <div class="hero-halo" aria-hidden="true"></div>
@@ -628,21 +737,25 @@
   <div class="hero-content">
     <p class="eyebrow">
       <span class="dot"></span>
-      <span class="en">Membership · Now Forming</span>
-      <span class="zh">會籍 · 正在籌建</span>
+      <span class="en">A private healthspan club · Forming 2026</span>
+      <span class="zh">春和會 · 私人健康會籍</span>
     </p>
+
+    <p class="motto">
+      <span class="en">The long life, well-lived.</span>
+      <span class="zh">春和忘憂</span>
+    </p>
+
     <h1>
       <span class="en">Live well.</span>
       <span class="zh">春和景明。</span>
     </h1>
+
     <p class="hero-sub">
-      <span class="en">For 120 well-lived years.</span>
-      <span class="zh">百廿年，皆春和。</span>
+      <span class="en">A hundred and twenty well-lived years.</span>
+      <span class="zh">百廿年，皆然。</span>
     </p>
-    <p class="hero-brief">
-      <span class="en">A private healthspan club.</span>
-      <span class="zh">一份私人健康會籍。</span>
-    </p>
+
     <div class="hero-buttons">
       <a class="btn-primary" href="#cta">
         <span class="en">Request invitation</span>
@@ -662,6 +775,7 @@
   </div>
 </section>
 
+<!-- ═══════ Membership cards ═══════ -->
 <section id="membership" class="membership">
   <div class="membership-container">
     <p class="section-eyebrow reveal">
@@ -669,7 +783,7 @@
       <span class="zh">— 會籍之內</span>
     </p>
     <h2 class="section-title reveal">
-      <span class="en">Inside the <span class="em">circle.</span></span>
+      <span class="en">Inside the <span class="qm">circle.</span></span>
       <span class="zh">會中<span class="em">所有</span>。</span>
     </h2>
 
@@ -677,35 +791,35 @@
       <div class="card reveal">
         <p class="card-num">N° 01</p>
         <h3>
-          <span class="en">Your health <span class="em">team.</span></span>
-          <span class="zh">你的健康<span class="em">團隊</span>。</span>
+          <span class="en">Your standing <span class="em">team.</span></span>
+          <span class="zh">你的<span class="em">健康團隊</span>。</span>
         </h3>
         <p>
-          <span class="en">A standing concierge — physicians, longevity specialists, a primary advisor who know your file, your habits, your protocol. They watch the things you&rsquo;d rather not have to.</span>
-          <span class="zh">一支常駐的團隊 —— 主治醫師、長壽學者、首席顧問。他們熟悉你的檔案、習慣、方案；那些本不該再由你操心的事，由他們替你看顧。</span>
+          <span class="en">Physicians, longevity specialists, a primary advisor — a concierge that knows your file, your habits, your protocol. They watch the things you&rsquo;d rather not have to.</span>
+          <span class="zh">主治醫師、長壽學者、首席顧問 —— 一支常駐的團隊熟悉你的檔案、習慣、方案。那些本不該再由你操心的事，由他們替你看顧。</span>
         </p>
       </div>
 
       <div class="card reveal">
         <p class="card-num">N° 02</p>
         <h3>
-          <span class="en">Global <span class="em">access.</span></span>
+          <span class="en">Reach the <span class="em">world.</span></span>
           <span class="zh">通達<span class="em">天下</span>。</span>
         </h3>
         <p>
-          <span class="en">When the moment comes for top-tier care — a second opinion, a surgical referral, an emerging therapy — the circle opens the door. The world&rsquo;s foremost hospitals and life-science labs, working on your file.</span>
-          <span class="zh">當你需要更高規格的診療 —— 跨院會診、外科推介、前沿療法 —— 我們替你推開那扇門。世上最頂尖的醫院與生命科學實驗室，皆為你而開。</span>
+          <span class="en">A second opinion. A surgical referral. An emerging therapy. The world&rsquo;s foremost hospitals and life-science laboratories — quietly working on your file.</span>
+          <span class="zh">第二診斷、外科會診、新興療法 —— 當你需要更高規格的醫療，我們替你推開那扇門。世上最頂尖的醫院與生命科學實驗室，皆為你而開。</span>
         </p>
       </div>
 
       <div class="card reveal">
         <p class="card-num">N° 03</p>
         <h3>
-          <span class="en">Curated <span class="em">protocols.</span></span>
+          <span class="en">Protocols, <span class="em">curated.</span></span>
           <span class="zh">嚴選<span class="em">方案</span>。</span>
         </h3>
         <p>
-          <span class="en">Every regimen — nutrition, metabolic, cellular, hormonal — drawn from the latest life-science research and vetted by the team before it reaches you. No more parsing studies, supplements, or trends.</span>
+          <span class="en">Every regimen — nutrition, metabolic, cellular, hormonal — drawn from the latest life-science research and vetted before it reaches you. No more parsing studies, supplements, or trends.</span>
           <span class="zh">每一項方案 —— 營養、代謝、細胞、激素 —— 皆取自前沿的生命科學研究，先經團隊反覆驗證，再交到你手上。研究的真偽、補劑的良莠、潮流的虛實，從此不必由你勞神。</span>
         </p>
       </div>
@@ -713,32 +827,33 @@
       <div class="card reveal">
         <p class="card-num">N° 04</p>
         <h3>
-          <span class="en">Stacked <span class="em">protection.</span></span>
+          <span class="en">Protection, <span class="em">stacked.</span></span>
           <span class="zh">雙重<span class="em">保障</span>。</span>
         </h3>
         <p>
-          <span class="en">Both health insurance and life insurance are part of the membership. Health insurance covers what your team prescribes. The life-insurance contract pays out if you don&rsquo;t reach 120 — to you, or to those you leave it to. The circle is paid to be right about you.</span>
-          <span class="zh">健康險與人壽險，皆併入這份會籍。健康險承擔團隊為你開出的所有方案；壽險則寫明：若你未能活到一百二十，理賠款歸你，或歸你所託之人。我們與你，賭的是同一件事。</span>
+          <span class="en">Health insurance covers what your team prescribes. A life-insurance contract pays out if you don&rsquo;t reach a hundred and twenty — to you, or to those you leave it to. The circle is paid to be right about you.</span>
+          <span class="zh">健康險承擔團隊為你開出的方案；壽險寫明：若你未能活到一百二十，理賠款歸你，或歸你所託之人。我們與你，賭的是同一件事。</span>
         </p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ═══════ How it works ═══════ -->
 <section id="how" class="how">
   <div class="how-container">
     <div class="how-diagram reveal">
       <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="210" cy="210" r="200" fill="none" stroke="#B5934A" stroke-opacity="0.35" stroke-width="1"/>
-        <circle cx="210" cy="210" r="155" fill="none" stroke="#B5934A" stroke-opacity="0.45" stroke-width="1"/>
+        <circle cx="210" cy="210" r="200" fill="none" stroke="#B5934A" stroke-opacity="0.32" stroke-width="1"/>
+        <circle cx="210" cy="210" r="155" fill="none" stroke="#B5934A" stroke-opacity="0.42" stroke-width="1"/>
         <circle cx="210" cy="210" r="105" fill="none" stroke="#B5934A" stroke-opacity="0.55" stroke-width="1"/>
-        <circle cx="210" cy="210" r="55"  fill="none" stroke="#B5934A" stroke-opacity="0.7"  stroke-width="1.2"/>
+        <circle cx="210" cy="210" r="55"  fill="none" stroke="#B5934A" stroke-opacity="0.72" stroke-width="1.2"/>
 
         <g class="en">
           <text x="210" y="218" text-anchor="middle"
                 font-family="Newsreader, serif" font-style="italic"
-                font-size="22" fill="#EFEAD8" font-weight="400">you</text>
-          <g font-family="Inter, sans-serif" font-size="9.5" letter-spacing="3" fill="#B5934A" style="text-transform: uppercase;">
+                font-size="22" fill="#EFEAD8" font-weight="350">you</text>
+          <g font-family="Inter, sans-serif" font-size="9.5" letter-spacing="3.4" fill="#B5934A" style="text-transform: uppercase;">
             <text x="210" y="20"  text-anchor="middle">PROTECTION</text>
             <text x="210" y="65"  text-anchor="middle">ACCESS</text>
             <text x="210" y="115" text-anchor="middle">PROTOCOLS</text>
@@ -748,8 +863,8 @@
         <g class="zh">
           <text x="210" y="220" text-anchor="middle"
                 font-family="Noto Serif TC, serif"
-                font-size="26" fill="#EFEAD8" font-weight="500">你</text>
-          <g font-family="Noto Sans TC, sans-serif" font-size="12" letter-spacing="3" fill="#B5934A">
+                font-size="28" fill="#EFEAD8" font-weight="500">你</text>
+          <g font-family="Noto Sans TC, sans-serif" font-size="12.5" letter-spacing="3" fill="#B5934A">
             <text x="210" y="20"  text-anchor="middle">保障</text>
             <text x="210" y="65"  text-anchor="middle">通達</text>
             <text x="210" y="115" text-anchor="middle">方案</text>
@@ -780,7 +895,7 @@
         <span class="zh">為<span class="em">你</span>而建。</span>
       </h2>
       <p class="reveal">
-        <span class="en">What was once a <span class="em">privilege of the few</span> — a private health team, curated protocols, financial products that bet on your longevity — is now a single membership.</span>
+        <span class="en">What was once the <span class="em">privilege of the few</span> — a private health team, curated protocols, financial products that bet on your longevity — has been gathered into a single membership.</span>
         <span class="zh">過去<span class="em">只為少數人</span>所擁的 —— 一支私人健康團隊、一組嚴選的方案、一紙與你長壽同進退的金融契約 —— 如今合於一份會籍之中。</span>
       </p>
       <p class="reveal">
@@ -795,6 +910,7 @@
   </div>
 </section>
 
+<!-- ═══════ Journey ═══════ -->
 <section id="journey" class="journey">
   <div class="journey-container">
     <p class="section-eyebrow reveal">
@@ -810,7 +926,7 @@
       <li class="reveal">
         <span class="step-title">
           <span class="en">Personal onboarding</span>
-          <span class="zh">入會與建檔</span>
+          <span class="zh">入會建檔</span>
         </span>
         <span class="step-meta">
           <span class="en">Day 01</span>
@@ -868,11 +984,12 @@
   </div>
 </section>
 
+<!-- ═══════ Backing ═══════ -->
 <section id="research" class="research">
   <div class="research-container">
     <p class="research-tag reveal">
-      <span class="en">— Backed by longevity science</span>
-      <span class="zh">— 仁者壽，學有所證</span>
+      <span class="en">Where the ancients said the virtuous live long, the modern world is proving them right.</span>
+      <span class="zh">仁者壽，學有所證</span>
     </p>
     <div class="logos">
       <div class="logo-cell reveal">
@@ -921,6 +1038,7 @@
   </div>
 </section>
 
+<!-- ═══════ CTA ═══════ -->
 <section id="cta" class="cta">
   <div class="cta-container">
     <h2 class="reveal">
@@ -928,7 +1046,7 @@
       <span class="zh">你的<span class="em">春和會</span>，<br/>正在成形。</span>
     </h2>
     <p class="cta-sub reveal">
-      <span class="en">Founding membership opens 2026. Leave an email — when the doors are ready, we&rsquo;ll send you a private invitation.</span>
+      <span class="en">Founding members are admitted in 2026. Leave a line — a private invitation will find you when the doors open.</span>
       <span class="zh">山水有相逢。創始會籍將於 2026 年開放，留下你的郵箱，門啟之時，一份私人邀請會送至你手上。</span>
     </p>
     <form class="signup reveal" onsubmit="event.preventDefault(); window.location='mailto:angel.alipay2011@gmail.com?subject=AeonCircle%20%E2%80%94%20Invitation%20request&body='+encodeURIComponent('Email: ' + this.elements.email.value);">
@@ -942,15 +1060,21 @@
 </section>
 
 <footer>
-  <div>
-    <span class="en">© 2026 AeonCircle · The Healthspan Club</span>
-    <span class="zh">© 2026 春和會 · 私人健康會籍</span>
-  </div>
-  <div class="links">
-    <a href="#"><span class="en">Privacy</span><span class="zh">隱私</span></a>
-    <a href="#"><span class="en">Science</span><span class="zh">科學</span></a>
-    <a href="#"><span class="en">Biosafety</span><span class="zh">生物安全</span></a>
-    <a href="mailto:angel.alipay2011@gmail.com"><span class="en">Contact</span><span class="zh">聯絡</span></a>
+  <p class="footer-motto">
+    <span class="en">The long life, well-lived.</span>
+    <span class="zh">春和忘憂</span>
+  </p>
+  <div class="footer-row">
+    <div>
+      <span class="en">© 2026 AeonCircle · The Healthspan Club</span>
+      <span class="zh">© 2026 春和會 · 私人健康會籍</span>
+    </div>
+    <div class="links">
+      <a href="#"><span class="en">Privacy</span><span class="zh">隱私</span></a>
+      <a href="#"><span class="en">Science</span><span class="zh">科學</span></a>
+      <a href="#"><span class="en">Biosafety</span><span class="zh">生物安全</span></a>
+      <a href="mailto:angel.alipay2011@gmail.com"><span class="en">Contact</span><span class="zh">聯絡</span></a>
+    </div>
   </div>
 </footer>
 
