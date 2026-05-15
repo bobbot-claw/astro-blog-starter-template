@@ -63,11 +63,9 @@
     position: relative;
   }
 
-  /* ── Bilingual visibility ─────────────────────────── */
   html.lang-en .zh,
   html.lang-zh .en { display: none; }
 
-  /* ── Nav ─────────────────────────────────────────── */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
@@ -126,7 +124,6 @@
     overflow: hidden;
   }
 
-  /* ── 1. Hero ─────────────────────────────────────── */
   .hero {
     min-height: 100vh;
     padding: 160px 40px 96px;
@@ -289,7 +286,6 @@
     50%      { opacity: 1; height: 44px; }
   }
 
-  /* ── 共用 ────────────────────────────────────────── */
   .section-eyebrow {
     font-family: var(--sans);
     font-size: 11px;
@@ -310,7 +306,6 @@
   html.lang-zh .section-title { font-weight: 500; letter-spacing: 0.02em; line-height: 1.2; }
   .section-title .em { color: var(--brass); }
 
-  /* ── 2. Cards ─────────────────────────────────── */
   .membership { background: var(--bg); border-top: 1px solid var(--line); }
   .membership-container { max-width: 1200px; margin: 0 auto; position: relative; }
   .cards {
@@ -362,7 +357,6 @@
   }
   html.lang-zh .card p { letter-spacing: 0.02em; line-height: 1.95; }
 
-  /* ── 3. How ─────────────────────────────────────── */
   .how { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .how-container {
     max-width: 1200px; margin: 0 auto;
@@ -396,7 +390,6 @@
   .how-text p strong { color: var(--ink); font-weight: 500; }
   .how-text p .em { color: var(--brass); }
 
-  /* ── 4. Journey ─────────────────────────────────── */
   .journey { background: var(--bg); }
   .journey-container { max-width: 920px; margin: 0 auto; }
   .timeline {
@@ -451,7 +444,6 @@
   }
   html.lang-en .timeline .step-meta { text-transform: uppercase; }
 
-  /* ── 5. Backing ─────────────────────────────────── */
   .research {
     background: var(--bg-2);
     text-align: center;
@@ -496,7 +488,6 @@
   }
   html.lang-en .logo-cell .lab-meta { text-transform: uppercase; }
 
-  /* ── 6. CTA ─────────────────────────────────────── */
   .cta {
     background:
       radial-gradient(900px 600px at 50% 50%, rgba(181,147,74,0.10), transparent 65%),
@@ -563,7 +554,6 @@
     background: var(--brass); color: var(--bg); border-color: var(--brass);
   }
 
-  /* ── Footer ──────────────────────────────────────── */
   footer {
     background: var(--bg);
     padding: 36px 40px;
@@ -581,7 +571,6 @@
   footer a { color: var(--muted); text-decoration: none; transition: color .2s; }
   footer a:hover { color: var(--brass); }
 
-  /* ── Reveal on scroll ────────────────────────────── */
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
   .reveal.in { opacity: 1; transform: none; }
 
@@ -619,9 +608,9 @@
     <span>AeonCircle</span>
   </a>
   <div class="nav-links">
-    <a href="#membership"><span class="en">Membership</span><span class="zh">會員</span></a>
+    <a href="#membership"><span class="en">Membership</span><span class="zh">會籍</span></a>
     <a href="#how"><span class="en">How it works</span><span class="zh">圓的運轉</span></a>
-    <a href="#journey"><span class="en">The Journey</span><span class="zh">軌跡</span></a>
+    <a href="#journey"><span class="en">The Journey</span><span class="zh">旅程</span></a>
     <a href="#research"><span class="en">Backing</span><span class="zh">背書</span></a>
     <a href="#cta" class="join"><span class="en">Request invitation</span><span class="zh">申請邀請</span></a>
     <button class="lang-toggle" id="lang-toggle" type="button">
@@ -631,7 +620,6 @@
   </div>
 </nav>
 
-<!-- ═══════ 1. Hero ═══════ -->
 <section id="hero" class="hero">
   <div class="hero-ring" aria-hidden="true"></div>
   <div class="hero-halo" aria-hidden="true"></div>
@@ -640,7 +628,7 @@
     <p class="eyebrow">
       <span class="dot"></span>
       <span class="en">Membership · Now Forming</span>
-      <span class="zh">會員 · 籌建中</span>
+      <span class="zh">會籍 · 正在籌建</span>
     </p>
     <h1>
       <span class="en">Live well.</span>
@@ -648,11 +636,11 @@
     </h1>
     <p class="hero-sub">
       <span class="en">For 120 well-lived years.</span>
-      <span class="zh">活得好的 120 年。</span>
+      <span class="zh">活好這一百二十年。</span>
     </p>
     <p class="hero-brief">
       <span class="en">A private healthspan club.</span>
-      <span class="zh">一份私人健康會員。</span>
+      <span class="zh">一份私人健康會籍。</span>
     </p>
     <div class="hero-buttons">
       <a class="btn-primary" href="#cta">
@@ -673,16 +661,15 @@
   </div>
 </section>
 
-<!-- ═══════ 2. Cards ═══════ -->
 <section id="membership" class="membership">
   <div class="membership-container">
     <p class="section-eyebrow reveal">
       <span class="en">— What you join</span>
-      <span class="zh">— 圓中所含</span>
+      <span class="zh">— 會籍之內</span>
     </p>
     <h2 class="section-title reveal">
       <span class="en">Inside the <span class="em">circle.</span></span>
-      <span class="zh">圓裡<span class="em">有什麼</span>。</span>
+      <span class="zh">圓中<span class="em">皆有</span>。</span>
     </h2>
 
     <div class="cards">
@@ -690,11 +677,11 @@
         <p class="card-num">N° 01</p>
         <h3>
           <span class="en">Your health <span class="em">team.</span></span>
-          <span class="zh">你的<span class="em">健康團隊</span>。</span>
+          <span class="zh">你的健康<span class="em">團隊</span>。</span>
         </h3>
         <p>
           <span class="en">A standing concierge — physicians, longevity specialists, a primary advisor who know your file, your habits, your protocol. They watch the things you&rsquo;d rather not have to.</span>
-          <span class="zh">一支常駐的團隊 —— 醫生、長壽專家、專屬顧問。他們了解你的檔案、習慣、方案，替你看那些你不該再操心的事。</span>
+          <span class="zh">一支常駐的團隊 —— 主治醫師、長壽學者、首席顧問。他們熟悉你的檔案、習慣、方案；那些本不該再由你操心的事，由他們替你看顧。</span>
         </p>
       </div>
 
@@ -702,11 +689,11 @@
         <p class="card-num">N° 02</p>
         <h3>
           <span class="en">Global <span class="em">access.</span></span>
-          <span class="zh">全球<span class="em">觸達</span>。</span>
+          <span class="zh">通達<span class="em">天下</span>。</span>
         </h3>
         <p>
           <span class="en">When the moment comes for top-tier care — a second opinion, a surgical referral, an emerging therapy — the circle opens the door. The world&rsquo;s foremost hospitals and life-science labs, working on your file.</span>
-          <span class="zh">當你需要頂級醫療 —— 第二診斷、外科會診、新興療法 —— 圓替你打開門。世界最頂尖的醫院與生命科學實驗室，為你的檔案而工作。</span>
+          <span class="zh">當你需要更高規格的診療 —— 跨院會診、外科推介、前沿療法 —— 圓替你推開那扇門。世上最頂尖的醫院與生命科學實驗室，皆為你而開。</span>
         </p>
       </div>
 
@@ -714,11 +701,11 @@
         <p class="card-num">N° 03</p>
         <h3>
           <span class="en">Curated <span class="em">protocols.</span></span>
-          <span class="zh">嚴選的<span class="em">方案</span>。</span>
+          <span class="zh">嚴選<span class="em">方案</span>。</span>
         </h3>
         <p>
           <span class="en">Every regimen — nutrition, metabolic, cellular, hormonal — drawn from the latest life-science research and vetted by the team before it reaches you. No more parsing studies, supplements, or trends.</span>
-          <span class="zh">每一項方案 —— 營養、代謝、細胞、激素 —— 都源自最新的生命科學研究，先經團隊驗證再到你面前。不必再分辨研究真假、補劑優劣、潮流真偽。</span>
+          <span class="zh">每一項方案 —— 營養、代謝、細胞、激素 —— 皆取自前沿的生命科學研究，先經團隊反覆驗證，再交到你手上。研究的真偽、補劑的良莠、潮流的虛實，從此不必由你勞神。</span>
         </p>
       </div>
 
@@ -730,14 +717,13 @@
         </h3>
         <p>
           <span class="en">Both health insurance and life insurance are part of the membership. Health insurance covers what your team prescribes. The life-insurance contract pays out if you don&rsquo;t reach 120 — to you, or to those you leave it to. The circle is paid to be right about you.</span>
-          <span class="zh">健康保險與人壽保險都納入會員。健康險覆蓋團隊處方所需。壽險合約在你未活到 120 時賠付 —— 賠給你，或賠給你所囑託的人。圓的成功，繫於你的成功。</span>
+          <span class="zh">健康險與人壽險，皆併入這份會籍。健康險承擔團隊為你開出的所有方案；壽險則寫明：若你未能活到一百二十，理賠款歸你，或歸你所託之人。圓的勝負，與你的勝負，繫於一處。</span>
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════ 3. How ═══════ -->
 <section id="how" class="how">
   <div class="how-container">
     <div class="how-diagram reveal">
@@ -764,7 +750,7 @@
                 font-size="26" fill="#EFEAD8" font-weight="500">你</text>
           <g font-family="Noto Sans TC, sans-serif" font-size="12" letter-spacing="3" fill="#B5934A">
             <text x="210" y="20"  text-anchor="middle">保障</text>
-            <text x="210" y="65"  text-anchor="middle">觸達</text>
+            <text x="210" y="65"  text-anchor="middle">通達</text>
             <text x="210" y="115" text-anchor="middle">方案</text>
             <text x="210" y="165" text-anchor="middle">團隊</text>
           </g>
@@ -790,65 +776,64 @@
       </p>
       <h2 class="reveal">
         <span class="en">Built around <span class="em">you.</span></span>
-        <span class="zh">圍繞<span class="em">你</span>而建。</span>
+        <span class="zh">為<span class="em">你</span>而建。</span>
       </h2>
       <p class="reveal">
         <span class="en">What was once a <span class="em">privilege of the few</span> — a private health team, curated protocols, financial products that bet on your longevity — is now a single membership.</span>
-        <span class="zh">曾經只屬於<span class="em">少數人</span>的 —— 私人健康團隊、嚴選的方案、與長壽對齊的金融產品 —— 現在被收入一份會員。</span>
+        <span class="zh">過去<span class="em">只為少數人</span>所擁的 —— 一支私人健康團隊、一組嚴選的方案、一紙與你長壽同進退的金融契約 —— 如今合於一份會籍之中。</span>
       </p>
       <p class="reveal">
         <span class="en">The circle keeps it running. <strong>You live well.</strong></span>
-        <span class="zh">圓替你保持運轉。<strong>你只負責活得好。</strong></span>
+        <span class="zh">圓替你運轉。<strong>你只管活得好。</strong></span>
       </p>
       <p class="reveal">
         <span class="en">Every layer — team, access, protocols, protection — wraps around the same center: you.</span>
-        <span class="zh">每一層 —— 團隊、觸達、方案、保障 —— 都圍繞同一個中心：你。</span>
+        <span class="zh">每一層 —— 團隊、通達、方案、保障 —— 都向同一個圓心展開：你。</span>
       </p>
     </div>
   </div>
 </section>
 
-<!-- ═══════ 4. Journey ═══════ -->
 <section id="journey" class="journey">
   <div class="journey-container">
     <p class="section-eyebrow reveal">
       <span class="en">— Your journey</span>
-      <span class="zh">— 你的軌跡</span>
+      <span class="zh">— 你的旅程</span>
     </p>
     <h2 class="section-title reveal">
       <span class="en">From day one,<br/>to a hundred and twenty.</span>
-      <span class="zh">從第一天，<br/>到一百二十年。</span>
+      <span class="zh">自第一日，<br/>至一百二十年。</span>
     </h2>
 
     <ol class="timeline">
       <li class="reveal">
         <span class="step-title">
           <span class="en">Personal onboarding</span>
-          <span class="zh">私人入會建檔</span>
+          <span class="zh">入會與建檔</span>
         </span>
         <span class="step-meta">
           <span class="en">Day 01</span>
-          <span class="zh">第 1 天</span>
+          <span class="zh">第一日</span>
         </span>
       </li>
       <li class="reveal">
         <span class="step-title">
           <span class="en">A plan built around you</span>
-          <span class="zh">圍繞你的方案</span>
+          <span class="zh">為你量身定方</span>
         </span>
         <span class="step-meta">
           <span class="en">Week 01</span>
-          <span class="zh">第 1 週</span>
+          <span class="zh">第一週</span>
         </span>
       </li>
       <li class="reveal">
         <span class="step-title">
           <span class="en">Daily structure, gently guided</span>
-          <span class="zh">每日的輕量結構</span>
+          <span class="zh">每日輕量陪伴</span>
         </span>
         <span class="step-meta">
           <span class="en">Daily</span>
-          <span class="zh">每 日</span>
+          <span class="zh">日復一日</span>
         </span>
       </li>
       <li class="reveal">
@@ -858,7 +843,7 @@
         </span>
         <span class="step-meta">
           <span class="en">Quarterly</span>
-          <span class="zh">每 季</span>
+          <span class="zh">每一季</span>
         </span>
       </li>
       <li class="reveal">
@@ -868,13 +853,13 @@
         </span>
         <span class="step-meta">
           <span class="en">Year on year</span>
-          <span class="zh">每 年</span>
+          <span class="zh">年復一年</span>
         </span>
       </li>
       <li class="reveal">
         <span class="step-title">
           <span class="en">A century, well-lived</span>
-          <span class="zh">一個被認真活過的世紀</span>
+          <span class="zh">一生好好活過</span>
         </span>
         <span class="step-meta">∞</span>
       </li>
@@ -882,12 +867,11 @@
   </div>
 </section>
 
-<!-- ═══════ 5. Backing ═══════ -->
 <section id="research" class="research">
   <div class="research-container">
     <p class="research-tag reveal">
       <span class="en">— Backed by longevity science</span>
-      <span class="zh">— 由長壽科學背書</span>
+      <span class="zh">— 由長壽科學為證</span>
     </p>
     <div class="logos">
       <div class="logo-cell reveal">
@@ -915,14 +899,14 @@
         <span class="lab-name">Tally Health</span>
         <span class="lab-meta">
           <span class="en">Biomarker Science</span>
-          <span class="zh">生物標誌物</span>
+          <span class="zh">生物標誌</span>
         </span>
       </div>
       <div class="logo-cell reveal">
         <span class="lab-name">Function</span>
         <span class="lab-meta">
           <span class="en">Continuous Health</span>
-          <span class="zh">持續健康</span>
+          <span class="zh">持續監測</span>
         </span>
       </div>
       <div class="logo-cell reveal">
@@ -936,7 +920,6 @@
   </div>
 </section>
 
-<!-- ═══════ 6. CTA ═══════ -->
 <section id="cta" class="cta">
   <div class="cta-container">
     <h2 class="reveal">
@@ -945,7 +928,7 @@
     </h2>
     <p class="cta-sub reveal">
       <span class="en">Founding membership opens 2026. Leave an email — when the doors are ready, we&rsquo;ll send you a private invitation.</span>
-      <span class="zh">創始會員將於 2026 開放。留下郵箱，門打開時我們會發出一份私人邀請。</span>
+      <span class="zh">創始會籍將於 2026 年開放。留下你的郵箱，門啟之時，一份私人邀請會送至你手上。</span>
     </p>
     <form class="signup reveal" onsubmit="event.preventDefault(); window.location='mailto:angel.alipay2011@gmail.com?subject=AeonCircle%20%E2%80%94%20Invitation%20request&body='+encodeURIComponent('Email: ' + this.elements.email.value);">
       <input type="email" name="email" placeholder="your@email.com" required />
@@ -960,27 +943,25 @@
 <footer>
   <div>
     <span class="en">© 2026 AeonCircle · The Healthspan Club</span>
-    <span class="zh">© 2026 AeonCircle · 私人健康會員</span>
+    <span class="zh">© 2026 AeonCircle · 私人健康會籍</span>
   </div>
   <div class="links">
     <a href="#"><span class="en">Privacy</span><span class="zh">隱私</span></a>
     <a href="#"><span class="en">Science</span><span class="zh">科學</span></a>
     <a href="#"><span class="en">Biosafety</span><span class="zh">生物安全</span></a>
-    <a href="mailto:angel.alipay2011@gmail.com"><span class="en">Contact</span><span class="zh">聯繫</span></a>
+    <a href="mailto:angel.alipay2011@gmail.com"><span class="en">Contact</span><span class="zh">聯絡</span></a>
   </div>
 </footer>
 
 <script>
-  // Reveal on scroll
   const obs = new IntersectionObserver(es => {
     es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
   document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
 
-  // Language toggle
   const TITLES = {
     en: 'AeonCircle — A private healthspan club',
-    zh: 'AeonCircle — 私人健康會員'
+    zh: 'AeonCircle — 私人健康會籍'
   };
   function toggleLang() {
     const html = document.documentElement;
@@ -991,11 +972,8 @@
     document.title = isZh ? TITLES.en : TITLES.zh;
     try { localStorage.setItem('aeoncircle-lang', isZh ? 'en' : 'zh'); } catch(e) {}
   }
-  // Bind to window so inline handlers still work
   window.toggleLang = toggleLang;
-  // Bind via addEventListener (the robust path — module scripts otherwise lose globals)
   document.getElementById('lang-toggle')?.addEventListener('click', toggleLang);
-  // Sync title on first load if saved was zh
   if (document.documentElement.classList.contains('lang-zh')) {
     document.title = TITLES.zh;
   }
